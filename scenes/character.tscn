@@ -21,7 +21,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_nyxsg")
 }],
 "loop": true,
-"name": &"default",
+"name": &"down idle",
 "speed": 0.75
 }]
 
@@ -33,7 +33,7 @@ script = ExtResource("1_tsvs4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ncipj")
-frame_progress = 0.460081
+animation = &"down idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, -0.25)

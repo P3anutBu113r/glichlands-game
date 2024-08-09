@@ -1,47 +1,47 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1723184850
-icon.svg::CompressedTexture2D::5392545246896395256::1721801380::1723170784::1::::<><>::
-::res://art/::1723170784
-the guy.png::CompressedTexture2D::6826848871643263144::1723090442::1723170784::1::::<><>::
-::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/::1721801671
-::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/::1721801671
-::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/::1723170784
-ATTRIBUTION.md::TextFile::-1::1721801671::0::1::::<><>::
-icon.png::CompressedTexture2D::3057958881761366215::1721801671::1723170784::1::::<><>::
-LICENSE.txt::TextFile::-1::1721801671::0::1::::<><>::
-plugin.cfg::TextFile::-1::1721801671::0::1::::<><>::
-README.md::TextFile::-1::1721801671::0::1::::<><>::
-sprout_lands_tilemap.gd::GDScript::-1::1721801671::0::1::::<>EditorPlugin<>::
-::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/assets/::1721801671
-read_me_art.txt::TextFile::-1::1721801671::0::1::::<><>::
-::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/assets/Objects/::1723170784
-Basic Furniture.png::CompressedTexture2D::4421650150456154401::1721801671::1723170784::1::::<><>::
-Basic Grass Biom things 1.png::CompressedTexture2D::5752242530816494643::1721801671::1723170784::1::::<><>::
-Basic Plants.png::CompressedTexture2D::894467400739919400::1721801671::1723170784::1::::<><>::
-Basic tools and meterials.png::CompressedTexture2D::4733311482244582414::1721801671::1723170784::1::::<><>::
-Chest.png::CompressedTexture2D::2897813217714041935::1721801671::1723170784::1::::<><>::
-Egg item.png::CompressedTexture2D::8382609414737574853::1721801671::1723170784::1::::<><>::
-Free_Chicken_House.png::CompressedTexture2D::1468367148268437706::1721801671::1723170784::1::::<><>::
-Paths.png::CompressedTexture2D::6255836295453431772::1721801671::1723170784::1::::<><>::
-Simple Milk and grass item.png::CompressedTexture2D::8047464864777860355::1721801671::1723170784::1::::<><>::
-Wood Bridge.png::CompressedTexture2D::1589095725053195288::1721801671::1723170784::1::::<><>::
-::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/assets/Tilesets/::1723170784
-Fences.png::CompressedTexture2D::1898265320555321051::1721801671::1723170784::1::::<><>::
-Grass.png::CompressedTexture2D::3311579704696081604::1721801671::1723170784::1::::<><>::
-Hills.png::CompressedTexture2D::4188676490251413485::1721801671::1723170784::1::::<><>::
-Tilled Dirt.png::CompressedTexture2D::264419934679261838::1721801671::1723170784::1::::<><>::
-Water.png::CompressedTexture2D::2959796041715164825::1721801671::1723170784::1::::<><>::
-Wooden House.png::CompressedTexture2D::3113874407173607720::1721801671::1723170784::1::::<><>::
-::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/base/::1721801671
-::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/base/scenes/::1723090407
-SproutLandsTileMap.tscn::PackedScene::6081619190790314201::1723090407::0::1::::<><>::uid://bngfh7nslvij1::::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/assets/Tilesets/Grass.png<>uid://d1c7tdeg77os::::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/assets/Tilesets/Tilled Dirt.png<>uid://2bsfgjphvmox::::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/assets/Tilesets/Fences.png<>uid://m0j0oacx0vki::::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/assets/Objects/Basic Plants.png<>uid://cn7oug0kk5tkd::::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/assets/Objects/Basic Grass Biom things 1.png<>uid://cvemyer4jq6we::::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/assets/Objects/Paths.png<>uid://b3846xma3tu8x::::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/assets/Objects/Basic Furniture.png<>uid://bif0n5c12bwrh::::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/assets/Tilesets/Water.png<>uid://bkmnb6mm8tpyu::::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/assets/Tilesets/Wooden House.png
-::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/examples/::1721801671
-::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/examples/scenes/::1723090408
-HarvestHillExample.tscn::PackedScene::6471016115048616901::1723090408::0::1::::<><>::uid://csv8m50kp3gk4::::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/base/scenes/SproutLandsTileMap.tscn
-::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/installer/::1721801671
-CopyConfirmationDialog.tscn::PackedScene::6506630939107533720::1721801671::0::1::::<><>::
-DestinationDialog.tscn::PackedScene::5524076666757777413::1721801671::0::1::::<><>::
-::res://scenes/::1723184446
-character.gd::GDScript::-1::1723182676::0::1::::<>CharacterBody2D<>::
-character.tscn::PackedScene::4105350345374497663::1723184446::0::1::::<><>::uid://c4i8g6inr645q::::res://art/the guy.png<>res://scenes/character.gd
-world.tscn::PackedScene::7748854593856326657::1723184446::0::1::::<><>::uid://byqwrxtmyt6ql::::res://scenes/character.tscn
+::res://::1723193017
+icon.svg::CompressedTexture2D::5392545246896395256::1723192801::1723192801::1::::<><>::
+::res://art/::1723192801
+the guy.png::CompressedTexture2D::6826848871643263144::1723192801::1723192801::1::::<><>::
+::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/::1723192801
+::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/::1723192801
+::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/::1723192801
+ATTRIBUTION.md::TextFile::-1::1723192801::0::1::::<><>::
+icon.png::CompressedTexture2D::3057958881761366215::1723192801::1723192801::1::::<><>::
+LICENSE.txt::TextFile::-1::1723192801::0::1::::<><>::
+plugin.cfg::TextFile::-1::1723192801::0::1::::<><>::
+README.md::TextFile::-1::1723192801::0::1::::<><>::
+sprout_lands_tilemap.gd::GDScript::-1::1723192801::0::1::::<>EditorPlugin<>::
+::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/assets/::1723192801
+read_me_art.txt::TextFile::-1::1723192801::0::1::::<><>::
+::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/assets/Objects/::1723192801
+Basic Furniture.png::CompressedTexture2D::4421650150456154401::1723192801::1723192801::1::::<><>::
+Basic Grass Biom things 1.png::CompressedTexture2D::5752242530816494643::1723192801::1723192801::1::::<><>::
+Basic Plants.png::CompressedTexture2D::894467400739919400::1723192801::1723192801::1::::<><>::
+Basic tools and meterials.png::CompressedTexture2D::4733311482244582414::1723192801::1723192801::1::::<><>::
+Chest.png::CompressedTexture2D::2897813217714041935::1723192801::1723192801::1::::<><>::
+Egg item.png::CompressedTexture2D::8382609414737574853::1723192801::1723192801::1::::<><>::
+Free_Chicken_House.png::CompressedTexture2D::1468367148268437706::1723192801::1723192801::1::::<><>::
+Paths.png::CompressedTexture2D::6255836295453431772::1723192801::1723192801::1::::<><>::
+Simple Milk and grass item.png::CompressedTexture2D::8047464864777860355::1723192801::1723192801::1::::<><>::
+Wood Bridge.png::CompressedTexture2D::1589095725053195288::1723192801::1723192801::1::::<><>::
+::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/assets/Tilesets/::1723192801
+Fences.png::CompressedTexture2D::1898265320555321051::1723192801::1723192801::1::::<><>::
+Grass.png::CompressedTexture2D::3311579704696081604::1723192801::1723192801::1::::<><>::
+Hills.png::CompressedTexture2D::4188676490251413485::1723192801::1723192801::1::::<><>::
+Tilled Dirt.png::CompressedTexture2D::264419934679261838::1723192801::1723192801::1::::<><>::
+Water.png::CompressedTexture2D::2959796041715164825::1723192801::1723192801::1::::<><>::
+Wooden House.png::CompressedTexture2D::3113874407173607720::1723192801::1723192801::1::::<><>::
+::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/base/::1723192801
+::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/base/scenes/::1723192801
+SproutLandsTileMap.tscn::PackedScene::6081619190790314201::1723192801::0::1::::<><>::uid://bngfh7nslvij1::::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/assets/Tilesets/Grass.png<>uid://d1c7tdeg77os::::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/assets/Tilesets/Tilled Dirt.png<>uid://2bsfgjphvmox::::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/assets/Tilesets/Fences.png<>uid://m0j0oacx0vki::::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/assets/Objects/Basic Plants.png<>uid://cn7oug0kk5tkd::::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/assets/Objects/Basic Grass Biom things 1.png<>uid://cvemyer4jq6we::::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/assets/Objects/Paths.png<>uid://b3846xma3tu8x::::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/assets/Objects/Basic Furniture.png<>uid://bif0n5c12bwrh::::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/assets/Tilesets/Water.png<>uid://bkmnb6mm8tpyu::::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/assets/Tilesets/Wooden House.png
+::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/examples/::1723192801
+::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/examples/scenes/::1723192801
+HarvestHillExample.tscn::PackedScene::6471016115048616901::1723192801::0::1::::<><>::uid://csv8m50kp3gk4::::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/base/scenes/SproutLandsTileMap.tscn
+::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/installer/::1723192801
+CopyConfirmationDialog.tscn::PackedScene::6506630939107533720::1723192801::0::1::::<><>::
+DestinationDialog.tscn::PackedScene::5524076666757777413::1723192801::0::1::::<><>::
+::res://scenes/::1723192801
+character.gd::GDScript::-1::1723192801::0::1::::<>CharacterBody2D<>::
+character.tscn::PackedScene::4105350345374497663::1723192801::0::1::::<><>::uid://c4i8g6inr645q::::res://art/the guy.png<>res://scenes/character.gd
+world.tscn::PackedScene::7748854593856326657::1723192801::0::1::::<><>::uid://byqwrxtmyt6ql::::res://scenes/character.tscn
