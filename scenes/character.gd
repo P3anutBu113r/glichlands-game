@@ -45,6 +45,8 @@ func playanimation(movement):
 			null
 		if movement == 0:
 			anim.play("down idle")
+			
+			#test
 		
 	
 	
