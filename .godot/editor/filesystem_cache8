@@ -1,8 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1723460567
+::res://::1724219018
 icon.svg::CompressedTexture2D::5392545246896395256::1721801380::1723170784::1::::<><>::
-::res://art/::1723460553
-the guy.png::CompressedTexture2D::6826848871643263144::1723090442::1723170784::1::::<><>::
+::res://art/::1724221291
+::res://art/Character spritesheets/::1724220086
+the guy up idle.png::CompressedTexture2D::3760859229220578172::1724220085::1724220086::1::::<><>::
+the guy.png::CompressedTexture2D::6826848871643263144::1723090442::1724219018::1::::<><>::
 ::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/::1721801671
 ::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/::1721801671
 ::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/::1723170784
@@ -41,7 +43,9 @@ HarvestHillExample.tscn::PackedScene::6471016115048616901::1723090408::0::1::::<
 ::res://art/Sprout-Lands-Tilemap-8527a2d9e6e66af6627eddf1c7e656f9680ee080/addons/sprout_lands_tilemap/installer/::1721801671
 CopyConfirmationDialog.tscn::PackedScene::6506630939107533720::1721801671::0::1::::<><>::
 DestinationDialog.tscn::PackedScene::5524076666757777413::1721801671::0::1::::<><>::
-::res://scenes/::1723460555
-character.gd::GDScript::-1::1723460555::0::1::::<>CharacterBody2D<>::
-character.tscn::PackedScene::4105350345374497663::1723460555::0::1::::<><>::uid://c4i8g6inr645q::::res://art/the guy.png<>res://scenes/character.gd
-world.tscn::PackedScene::7748854593856326657::1723185028::0::1::::<><>::uid://byqwrxtmyt6ql::::res://scenes/character.tscn
+::res://art/tilemap/::1724221303
+path & grass.png::CompressedTexture2D::5479747777143124264::1724221303::1724221303::1::::<><>::
+::res://scenes/::1724220120
+character.gd::GDScript::-1::1724219900::0::1::::<>CharacterBody2D<>::
+character.tscn::PackedScene::4105350345374497663::1724220120::0::1::::<><>::uid://c4i8g6inr645q::::res://art/Character spritesheets/the guy.png<>res://scenes/character.gd<>uid://btt12jfiyqha7::::res://art/Character spritesheets/the guy up idle.png
+world.tscn::PackedScene::7748854593856326657::1724220119::0::1::::<><>::uid://byqwrxtmyt6ql::::res://scenes/character.tscn

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4i8g6inr645q"
-path="res://.godot/imported/the guy.png-95e9654eed0c1558532569c04c3a292c.ctex"
+uid="uid://ckcov67odbexs"
+path="res://.godot/imported/path & grass.png-357d949bc25ddb0325d1e22d92a3caed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/the guy.png"
-dest_files=["res://.godot/imported/the guy.png-95e9654eed0c1558532569c04c3a292c.ctex"]
+source_file="res://art/tilemap/path & grass.png"
+dest_files=["res://.godot/imported/path & grass.png-357d949bc25ddb0325d1e22d92a3caed.ctex"]
 
 [params]
 

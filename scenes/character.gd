@@ -42,11 +42,16 @@ func playanimation(movement):
 	if dir == "down":
 		anim.flip_h = false
 		if movement == 1:
-			null
-		if movement == 0:
+			anim.play("down idle")
+		elif movement == 0:
 			anim.play("down idle")
 			
 			#test
-		
+	elif dir == "up":
+		anim.flip_h = false
+		if movement == 1:
+			anim.play("up idle")
+		if movement == 0:
+			anim.play("up idle")
 	
 	

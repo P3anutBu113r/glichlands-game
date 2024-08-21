@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://byqwrxtmyt6ql"]
+[gd_scene load_steps=10 format=3 uid="uid://byqwrxtmyt6ql"]
 
-[ext_resource type="Texture2D" uid="uid://c4i8g6inr645q" path="res://art/the guy.png" id="1_hpyxm"]
+[ext_resource type="Texture2D" uid="uid://c4i8g6inr645q" path="res://art/Character spritesheets/the guy.png" id="1_hpyxm"]
 [ext_resource type="Script" path="res://scenes/character.gd" id="1_tsvs4"]
+[ext_resource type="Texture2D" uid="uid://btt12jfiyqha7" path="res://art/Character spritesheets/the guy up idle.png" id="3_pqy8k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vbbgd"]
 atlas = ExtResource("1_hpyxm")
@@ -9,6 +10,14 @@ region = Rect2(0, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nyxsg"]
 atlas = ExtResource("1_hpyxm")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tgvrc"]
+atlas = ExtResource("3_pqy8k")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xdji0"]
+atlas = ExtResource("3_pqy8k")
 region = Rect2(16, 0, 16, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ncipj"]
@@ -22,7 +31,18 @@ animations = [{
 }],
 "loop": true,
 "name": &"down idle",
-"speed": 0.75
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tgvrc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xdji0")
+}],
+"loop": true,
+"name": &"up idle",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7u1v1"]
