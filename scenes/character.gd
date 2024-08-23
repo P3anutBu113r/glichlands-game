@@ -1,7 +1,8 @@
 extends CharacterBody2D
 
 const speed = 100
-var current_dirrection = "none"
+var current_dirrection = "down"
+var dashcooldown = true
 func _ready():
 	$AnimatedSprite2D.play("down idle")
 
@@ -10,7 +11,9 @@ func _physics_process(delta):
 	
 	
 func player_movement(delta):
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_just_pressed("space"):
+		dash(delta)
+	elif Input.is_action_pressed("ui_right"):
 		current_dirrection = "right"
 		playanimation(1)
 		velocity.x = speed
@@ -30,13 +33,40 @@ func player_movement(delta):
 		playanimation(1)
 		velocity.x = 0
 		velocity.y = -speed
+	
 	else:
 		playanimation(0)
 		velocity.x = 0
 		velocity.y = 0
 		
 	move_and_slide()
-	
+#dashing
+func dash(delta):
+	var dir = current_dirrection
+	if dashcooldown == true:
+		if dir == "up":
+			velocity.y = -1500
+			velocity.x = 0
+			dashcooldown = false
+			$dashTimer.start
+		if dir == "down":
+			velocity.y = 1500
+			velocity.x = 0
+			dashcooldown = false
+			$dashTimer.start
+		if dir == "left":
+			velocity.y = 0
+			velocity.x = -1500
+			dashcooldown = false
+			$dashTimer.start
+		if dir == "right":
+			velocity.y = 0
+			velocity.x = 1500
+			dashcooldown = false
+			$dashTimer.start
+func _on_timer_timeout():
+	dashcooldown = true
+
 func playanimation(movement):
 	var dir = current_dirrection
 	var anim = $AnimatedSprite2D 
@@ -46,13 +76,22 @@ func playanimation(movement):
 			anim.play("down idle")
 		elif movement == 0:
 			anim.play("down idle")
-			
-			#test
 	elif dir == "up":
 		anim.flip_h = false
 		if movement == 1:
 			anim.play("up idle")
 		if movement == 0:
 			anim.play("up idle")
-	
+	elif dir == "right":
+		anim.flip_h = false
+		if movement == 1:
+			anim.play("side idle")
+		if movement == 0:
+			anim.play("side idle")
+	elif dir == "left":
+		anim.flip_h = true
+		if movement == 1:
+			anim.play("side idle")
+		if movement == 0:
+			anim.play("side idle")
 	

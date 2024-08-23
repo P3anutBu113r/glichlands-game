@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://byqwrxtmyt6ql"]
+[gd_scene load_steps=13 format=3 uid="uid://byqwrxtmyt6ql"]
 
 [ext_resource type="Texture2D" uid="uid://c4i8g6inr645q" path="res://art/Character spritesheets/the guy.png" id="1_hpyxm"]
 [ext_resource type="Script" path="res://scenes/character.gd" id="1_tsvs4"]
+[ext_resource type="Texture2D" uid="uid://51l3itshx5hb" path="res://art/Character spritesheets/Right-Sideways-guy1-sheet.png" id="3_7j5o5"]
 [ext_resource type="Texture2D" uid="uid://btt12jfiyqha7" path="res://art/Character spritesheets/the guy up idle.png" id="3_pqy8k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vbbgd"]
@@ -11,6 +12,14 @@ region = Rect2(0, 0, 16, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_nyxsg"]
 atlas = ExtResource("1_hpyxm")
 region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6lws4"]
+atlas = ExtResource("3_7j5o5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ofco"]
+atlas = ExtResource("3_7j5o5")
+region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tgvrc"]
 atlas = ExtResource("3_pqy8k")
@@ -35,6 +44,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_6lws4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ofco")
+}],
+"loop": true,
+"name": &"side idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_tgvrc")
 }, {
 "duration": 1.0,
@@ -46,15 +66,22 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7u1v1"]
-size = Vector2(15, 29.5)
+size = Vector2(15, 9.5)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_tsvs4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ncipj")
-animation = &"up idle"
+animation = &"side idle"
+frame_progress = 0.190278
+
+[node name="dashTimer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -0.25)
+position = Vector2(0.5, 9.75)
 shape = SubResource("RectangleShape2D_7u1v1")
+
+[connection signal="timeout" from="dashTimer" to="." method="_on_timer_timeout"]
