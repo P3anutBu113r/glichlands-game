@@ -8,6 +8,8 @@ func _ready():
 
 func _physics_process(delta):
 	player_movement(delta)
+
+
 	
 	
 func player_movement(delta):
@@ -40,7 +42,16 @@ func player_movement(delta):
 		velocity.y = 0
 		
 	move_and_slide()
+func player():
+	pass
 #dashing
+# Called when the node enters the scene tree for the first time
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
 func dash(delta):
 	var dir = current_dirrection
 	if dashcooldown == true:
@@ -94,4 +105,8 @@ func playanimation(movement):
 			anim.play("side idle")
 		if movement == 0:
 			anim.play("side idle")
+		
+
+	
+	
 	

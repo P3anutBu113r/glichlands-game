@@ -1,11 +1,23 @@
 extends Node
 
+var current_scene = "junction"
+var transition_scene = false
+func _physics_process(delta):
+	null
+var firstjunctionload = true
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+var flower_ring_exit_x = 108
+var flower_ring_exit_y = 193
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func finish_changescenes():
+	if transition_scene == true:
+		if current_scene =="junction":
+			current_scene = "flower_ring"
+		elif current_scene == "flower_ring":
+			current_scene = "junction"
+	
+	elif transition_scene == false:
+		current_scene = "junction"
+		
+	
+	

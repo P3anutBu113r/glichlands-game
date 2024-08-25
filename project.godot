@@ -11,13 +11,17 @@ config_version=5
 [application]
 
 config/name="random game"
-run/main_scene="res://scenes/world.tscn"
+run/main_scene="res://scenes/junction.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Global="*res://scripts/global.gd"
+
+[display]
+
+window/stretch/mode="viewport"
 
 [input]
 

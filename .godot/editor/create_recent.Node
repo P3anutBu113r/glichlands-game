@@ -1,7 +1,7 @@
+CollisionShape2D
+Area2D
 CollisionPolygon2D
 StaticBody2D
-Area2D
 Camera2D
-Timer
 TileMap
-CollisionShape2D
+Timer
