@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dinurdrpd0w14"]
+[gd_scene load_steps=6 format=3 uid="uid://dinurdrpd0w14"]
 
 [ext_resource type="Script" path="res://scripts/junction.gd" id="1_ln768"]
 [ext_resource type="PackedScene" uid="uid://byqwrxtmyt6ql" path="res://scenes/character.tscn" id="2_ir5xv"]
 [ext_resource type="TileSet" uid="uid://bdrhldmlhebet" path="res://art/tilesets/plains.tres" id="3_mpkov"]
+[ext_resource type="PackedScene" uid="uid://bm0dw3edj6qxj" path="res://scenes/green_slime.tscn" id="4_s5cjb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ypyom"]
 size = Vector2(41, 36)
@@ -54,6 +55,18 @@ position = Vector2(100, 212)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="flower ring transition"]
 position = Vector2(10, 3)
 shape = SubResource("RectangleShape2D_ypyom")
+
+[node name="green slime" parent="." instance=ExtResource("4_s5cjb")]
+position = Vector2(124, 132)
+
+[node name="green slime2" parent="." instance=ExtResource("4_s5cjb")]
+position = Vector2(108, 132)
+
+[node name="green slime3" parent="." instance=ExtResource("4_s5cjb")]
+position = Vector2(91, 132)
+
+[node name="green slime4" parent="." instance=ExtResource("4_s5cjb")]
+position = Vector2(-136, -27)
 
 [connection signal="body_entered" from="flower ring transition" to="." method="_on_flower_ring_transition_body_entered"]
 [connection signal="body_exited" from="flower ring transition" to="." method="_on_flower_ring_transition_body_exited"]

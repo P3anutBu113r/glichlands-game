@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://51l3itshx5hb"
-path="res://.godot/imported/Right-Sideways-guy1-sheet.png-9544b05cc2757bbc5adb1f5167eed030.ctex"
+uid="uid://c4i8g6inr645q"
+path="res://.godot/imported/the guy.png-1da6263fb7b1b294e99ff903bf057951.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Character spritesheets/Right-Sideways-guy1-sheet.png"
-dest_files=["res://.godot/imported/Right-Sideways-guy1-sheet.png-9544b05cc2757bbc5adb1f5167eed030.ctex"]
+source_file="res://art/Character spritesheets/the guy/the guy.png"
+dest_files=["res://.godot/imported/the guy.png-1da6263fb7b1b294e99ff903bf057951.ctex"]
 
 [params]
 

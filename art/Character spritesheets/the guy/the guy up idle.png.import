@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4i8g6inr645q"
-path="res://.godot/imported/the guy.png-368a1048159aec3a8616476aabaafd63.ctex"
+uid="uid://btt12jfiyqha7"
+path="res://.godot/imported/the guy up idle.png-fdc9894423a18d28f0715d15fb522189.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Character spritesheets/the guy.png"
-dest_files=["res://.godot/imported/the guy.png-368a1048159aec3a8616476aabaafd63.ctex"]
+source_file="res://art/Character spritesheets/the guy/the guy up idle.png"
+dest_files=["res://.godot/imported/the guy up idle.png-fdc9894423a18d28f0715d15fb522189.ctex"]
 
 [params]
 

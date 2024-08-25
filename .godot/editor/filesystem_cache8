@@ -1,67 +1,70 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1724545907
-export_presets.cfg::TextFile::-1::1724327534::0::1::::<><>::
-icon.svg::CompressedTexture2D::5392545246896395256::1723192801::1723192801::1::::<><>::
-README.md::TextFile::-1::1724371007::0::1::::<><>::
-::res://art/::1724459714
-::res://art/addons/::1724333738
-::res://art/addons/sprout_lands_tilemap/::1724404261
-ATTRIBUTION.md::TextFile::-1::1723192801::0::1::::<><>::
-icon.png::CompressedTexture2D::3057958881761366215::1723192801::1724404261::1::::<><>::
-LICENSE.txt::TextFile::-1::1723192801::0::1::::<><>::
-plugin.cfg::TextFile::-1::1723192801::0::1::::<><>::
-README.md::TextFile::-1::1723192801::0::1::::<><>::
-sprout_lands_tilemap.gd::GDScript::-1::1723192801::0::1::::<>EditorPlugin<>::
-::res://art/addons/sprout_lands_tilemap/assets/::1723192801
-read_me_art.txt::TextFile::-1::1723192801::0::1::::<><>::
-::res://art/addons/sprout_lands_tilemap/assets/Objects/::1724404261
-Basic Furniture.png::CompressedTexture2D::4421650150456154401::1723192801::1724404261::1::::<><>::
-Basic Grass Biom things 1.png::CompressedTexture2D::5752242530816494643::1723192801::1724404261::1::::<><>::
-Basic Plants.png::CompressedTexture2D::894467400739919400::1723192801::1724404261::1::::<><>::
-Basic tools and meterials.png::CompressedTexture2D::4733311482244582414::1723192801::1724404261::1::::<><>::
-Chest.png::CompressedTexture2D::2897813217714041935::1723192801::1724404261::1::::<><>::
-Egg item.png::CompressedTexture2D::8382609414737574853::1723192801::1724404261::1::::<><>::
-Free_Chicken_House.png::CompressedTexture2D::1468367148268437706::1723192801::1724404261::1::::<><>::
-Paths.png::CompressedTexture2D::6255836295453431772::1723192801::1724404261::1::::<><>::
-Simple Milk and grass item.png::CompressedTexture2D::8047464864777860355::1723192801::1724404261::1::::<><>::
-Wood Bridge.png::CompressedTexture2D::1589095725053195288::1723192801::1724404261::1::::<><>::
-::res://art/addons/sprout_lands_tilemap/assets/Tilesets/::1724404261
-Fences.png::CompressedTexture2D::1898265320555321051::1723192801::1724404261::1::::<><>::
-Grass.png::CompressedTexture2D::3311579704696081604::1723192801::1724404261::1::::<><>::
-Hills.png::CompressedTexture2D::4188676490251413485::1724334513::1724404261::1::::<><>::
-Tilled Dirt.png::CompressedTexture2D::264419934679261838::1723192801::1724404261::1::::<><>::
-Water.png::CompressedTexture2D::2959796041715164825::1723192801::1724404261::1::::<><>::
-Wooden House.png::CompressedTexture2D::3113874407173607720::1723192801::1724404261::1::::<><>::
-::res://art/addons/sprout_lands_tilemap/base/::1723192801
-::res://art/addons/sprout_lands_tilemap/base/scenes/::1724404261
-SproutLandsTileMap.tscn::PackedScene::6081619190790314201::1724404261::0::1::::<><>::uid://bngfh7nslvij1::::res://art/addons/sprout_lands_tilemap/assets/Tilesets/Grass.png<>uid://d1c7tdeg77os::::res://art/addons/sprout_lands_tilemap/assets/Tilesets/Tilled Dirt.png<>uid://2bsfgjphvmox::::res://art/addons/sprout_lands_tilemap/assets/Tilesets/Fences.png<>uid://m0j0oacx0vki::::res://art/addons/sprout_lands_tilemap/assets/Objects/Basic Plants.png<>uid://cn7oug0kk5tkd::::res://art/addons/sprout_lands_tilemap/assets/Objects/Basic Grass Biom things 1.png<>uid://cvemyer4jq6we::::res://art/addons/sprout_lands_tilemap/assets/Objects/Paths.png<>uid://b3846xma3tu8x::::res://art/addons/sprout_lands_tilemap/assets/Objects/Basic Furniture.png<>uid://bif0n5c12bwrh::::res://art/addons/sprout_lands_tilemap/assets/Tilesets/Water.png<>uid://bkmnb6mm8tpyu::::res://art/addons/sprout_lands_tilemap/assets/Tilesets/Wooden House.png
-::res://art/addons/sprout_lands_tilemap/examples/::1723192801
-::res://art/addons/sprout_lands_tilemap/examples/scenes/::1724404261
-HarvestHillExample.tscn::PackedScene::6471016115048616901::1724404261::0::1::::<><>::uid://csv8m50kp3gk4::::res://art/addons/sprout_lands_tilemap/base/scenes/SproutLandsTileMap.tscn
-::res://art/addons/sprout_lands_tilemap/installer/::1723192801
-CopyConfirmationDialog.tscn::PackedScene::6506630939107533720::1723192801::0::1::::<><>::
-DestinationDialog.tscn::PackedScene::5524076666757777413::1723192801::0::1::::<><>::
-::res://art/Character spritesheets/::1724401052
-Right-Sideways-guy1-sheet.png::CompressedTexture2D::2160057470262509839::1724401052::1724401052::1::::<><>::
-the guy up idle.png::CompressedTexture2D::3760859229220578172::1724320024::1724320024::1::::<><>::
-the guy.png::CompressedTexture2D::6826848871643263144::1724320024::1724320024::1::::<><>::
-::res://art/objects/::1724404258
-grassland bushes.png::CompressedTexture2D::3814772682178903483::1724330856::1724404258::1::::<><>::
-plains trees.png::CompressedTexture2D::3649853662573821741::1724404248::1724404258::1::::<><>::
-::res://art/tilemap/::1724404232
-Hills ladder.png::CompressedTexture2D::2444871238776952284::1724401052::1724370470::1::::<><>::
-hills.png::CompressedTexture2D::1260720140829544026::1724332572::1724332578::1::::<><>::
-path & grass.png::CompressedTexture2D::5479747777143124264::1724320024::1724320024::1::::<><>::
-tileset 2.png::CompressedTexture2D::3053982576288483573::1724324164::1724332582::1::::<><>::
-::res://art/tilesets/::1724543970
-plains.tres::TileSet::2632526475725539471::1724543970::0::1::::<><>::uid://bsaas6nruknw4::::res://art/objects/plains trees.png<>uid://ckcov67odbexs::::res://art/tilemap/path & grass.png<>uid://bjrmv80mjymbt::::res://art/tilemap/tileset 2.png<>uid://r7x42i8f7kys::::res://art/tilemap/hills.png<>uid://bul50psdfedr4::::res://art/objects/grassland bushes.png<>uid://ba3kw37k08ad5::::res://art/tilemap/Hills ladder.png
-::res://scenes/::1724545901
-character.tscn::PackedScene::4105350345374497663::1724545649::0::1::::<><>::uid://c4i8g6inr645q::::res://art/Character spritesheets/the guy.png<>res://scripts/character.gd<>uid://51l3itshx5hb::::res://art/Character spritesheets/Right-Sideways-guy1-sheet.png<>uid://btt12jfiyqha7::::res://art/Character spritesheets/the guy up idle.png
-flower_ring.tscn::PackedScene::282066037275744810::1724545901::0::1::::<><>::res://scripts/flower_ring.gd<>uid://byqwrxtmyt6ql::::res://scenes/character.tscn<>uid://bdrhldmlhebet::::res://art/tilesets/plains.tres
-junction.tscn::PackedScene::7748854593856326657::1724545648::0::1::::<><>::res://scripts/junction.gd<>uid://byqwrxtmyt6ql::::res://scenes/character.tscn<>uid://bdrhldmlhebet::::res://art/tilesets/plains.tres
-Right-Sideways-guy1-sheet.png::CompressedTexture2D::7495322751144654773::1724401052::1724401052::1::::<><>::
-::res://scripts/::1724545901
-character.gd::GDScript::-1::1724545901::0::1::::<>CharacterBody2D<>::
-flower_ring.gd::GDScript::-1::1724545614::0::1::::<>Node2D<>::
-global.gd::GDScript::-1::1724545901::0::1::::<>Node<>::
-junction.gd::GDScript::-1::1724544511::0::1::::<>Node2D<>::
+::res://::1724587315
+export_presets.cfg::TextFile::-1::1724371199::0::1::::<><>::
+icon.svg::CompressedTexture2D::5392545246896395256::1721801380::1723170784::1::::<><>::
+README.md::TextFile::-1::1724371199::0::1::::<><>::
+::res://art/::1724550297
+::res://art/addons/::1724550297
+::res://art/addons/sprout_lands_tilemap/::1724550297
+ATTRIBUTION.md::TextFile::-1::1724550297::0::1::::<><>::
+icon.png::CompressedTexture2D::3057958881761366215::1724550297::1724550297::1::::<><>::
+LICENSE.txt::TextFile::-1::1724550297::0::1::::<><>::
+plugin.cfg::TextFile::-1::1724550297::0::1::::<><>::
+README.md::TextFile::-1::1724550297::0::1::::<><>::
+sprout_lands_tilemap.gd::GDScript::-1::1724550297::0::1::::<>EditorPlugin<>::
+::res://art/addons/sprout_lands_tilemap/assets/::1724550297
+read_me_art.txt::TextFile::-1::1724550297::0::1::::<><>::
+::res://art/addons/sprout_lands_tilemap/assets/Objects/::1724550297
+Basic Furniture.png::CompressedTexture2D::4421650150456154401::1724550297::1724550297::1::::<><>::
+Basic Grass Biom things 1.png::CompressedTexture2D::5752242530816494643::1724550297::1724550297::1::::<><>::
+Basic Plants.png::CompressedTexture2D::894467400739919400::1724550297::1724550297::1::::<><>::
+Basic tools and meterials.png::CompressedTexture2D::4733311482244582414::1724550297::1724550297::1::::<><>::
+Chest.png::CompressedTexture2D::2897813217714041935::1724550297::1724550297::1::::<><>::
+Egg item.png::CompressedTexture2D::8382609414737574853::1724550297::1724550297::1::::<><>::
+Free_Chicken_House.png::CompressedTexture2D::1468367148268437706::1724550297::1724550297::1::::<><>::
+Paths.png::CompressedTexture2D::6255836295453431772::1724550297::1724550297::1::::<><>::
+Simple Milk and grass item.png::CompressedTexture2D::8047464864777860355::1724550297::1724550297::1::::<><>::
+Wood Bridge.png::CompressedTexture2D::1589095725053195288::1724550297::1724550297::1::::<><>::
+::res://art/addons/sprout_lands_tilemap/assets/Tilesets/::1724550297
+Fences.png::CompressedTexture2D::1898265320555321051::1724550297::1724550297::1::::<><>::
+Grass.png::CompressedTexture2D::3311579704696081604::1724550297::1724550297::1::::<><>::
+Hills.png::CompressedTexture2D::4188676490251413485::1724550297::1724550297::1::::<><>::
+Tilled Dirt.png::CompressedTexture2D::264419934679261838::1724550297::1724550297::1::::<><>::
+Water.png::CompressedTexture2D::2959796041715164825::1724550297::1724550297::1::::<><>::
+Wooden House.png::CompressedTexture2D::3113874407173607720::1724550297::1724550297::1::::<><>::
+::res://art/addons/sprout_lands_tilemap/base/::1724550297
+::res://art/addons/sprout_lands_tilemap/base/scenes/::1724550297
+SproutLandsTileMap.tscn::PackedScene::6081619190790314201::1724550297::0::1::::<><>::uid://bngfh7nslvij1::::res://art/addons/sprout_lands_tilemap/assets/Tilesets/Grass.png<>uid://d1c7tdeg77os::::res://art/addons/sprout_lands_tilemap/assets/Tilesets/Tilled Dirt.png<>uid://2bsfgjphvmox::::res://art/addons/sprout_lands_tilemap/assets/Tilesets/Fences.png<>uid://m0j0oacx0vki::::res://art/addons/sprout_lands_tilemap/assets/Objects/Basic Plants.png<>uid://cn7oug0kk5tkd::::res://art/addons/sprout_lands_tilemap/assets/Objects/Basic Grass Biom things 1.png<>uid://cvemyer4jq6we::::res://art/addons/sprout_lands_tilemap/assets/Objects/Paths.png<>uid://b3846xma3tu8x::::res://art/addons/sprout_lands_tilemap/assets/Objects/Basic Furniture.png<>uid://bif0n5c12bwrh::::res://art/addons/sprout_lands_tilemap/assets/Tilesets/Water.png<>uid://bkmnb6mm8tpyu::::res://art/addons/sprout_lands_tilemap/assets/Tilesets/Wooden House.png
+::res://art/addons/sprout_lands_tilemap/examples/::1724550297
+::res://art/addons/sprout_lands_tilemap/examples/scenes/::1724550297
+HarvestHillExample.tscn::PackedScene::6471016115048616901::1724550297::0::1::::<><>::uid://csv8m50kp3gk4::::res://art/addons/sprout_lands_tilemap/base/scenes/SproutLandsTileMap.tscn
+::res://art/addons/sprout_lands_tilemap/installer/::1724550297
+CopyConfirmationDialog.tscn::PackedScene::6506630939107533720::1724550297::0::1::::<><>::
+DestinationDialog.tscn::PackedScene::5524076666757777413::1724550297::0::1::::<><>::
+::res://art/Character spritesheets/::1724587089
+::res://art/Character spritesheets/slime/::1724587089
+slimeidle.png::CompressedTexture2D::5479809361479837666::1724586763::1724587089::1::::<><>::
+::res://art/Character spritesheets/the guy/::1724587315
+Right-Sideways-guy1-sheet.png::CompressedTexture2D::7495322751144654773::1724379051::1724587315::1::::<><>::
+the guy up idle.png::CompressedTexture2D::3760859229220578172::1724220085::1724587074::1::::<><>::
+the guy.png::CompressedTexture2D::6826848871643263144::1723090442::1724587078::1::::<><>::
+::res://art/objects/::1724550297
+grassland bushes.png::CompressedTexture2D::3814772682178903483::1724550297::1724550297::1::::<><>::
+plains trees.png::CompressedTexture2D::3649853662573821741::1724550297::1724550297::1::::<><>::
+::res://art/tilemap/::1724587043
+Hills ladder.png::CompressedTexture2D::2444871238776952284::1724378184::1724378185::1::::<><>::
+hills.png::CompressedTexture2D::1260720140829544026::1724371199::1724371199::1::::<><>::
+path & grass.png::CompressedTexture2D::5479747777143124264::1724221303::1724221303::1::::<><>::
+tileset 2.png::CompressedTexture2D::3053982576288483573::1724371199::1724371199::1::::<><>::
+::res://art/tilesets/::1724587069
+plains.tres::TileSet::2632526475725539471::1724587069::0::1::::<><>::uid://bsaas6nruknw4::::res://art/objects/plains trees.png<>uid://ckcov67odbexs::::res://art/tilemap/path & grass.png<>uid://bjrmv80mjymbt::::res://art/tilemap/tileset 2.png<>uid://r7x42i8f7kys::::res://art/tilemap/hills.png<>uid://bul50psdfedr4::::res://art/objects/grassland bushes.png<>uid://ba3kw37k08ad5::::res://art/tilemap/Hills ladder.png
+::res://scenes/::1724587315
+character.tscn::PackedScene::4105350345374497663::1724587078::0::1::::<><>::uid://c4i8g6inr645q::::res://art/Character spritesheets/the guy/the guy.png<>res://scripts/character.gd<>uid://51l3itshx5hb::::res://art/Character spritesheets/the guy/Right-Sideways-guy1-sheet.png<>uid://btt12jfiyqha7::::res://art/Character spritesheets/the guy/the guy up idle.png
+flower_ring.tscn::PackedScene::282066037275744810::1724560662::0::1::::<><>::res://scripts/flower_ring.gd<>uid://byqwrxtmyt6ql::::res://scenes/character.tscn<>uid://bdrhldmlhebet::::res://art/tilesets/plains.tres
+green_slime.tscn::PackedScene::3280519166627783871::1724587296::0::1::::<><>::uid://ckcpwop4xluv7::::res://art/Character spritesheets/slime/slimeidle.png
+junction.tscn::PackedScene::7748854593856326657::1724560662::0::1::::<><>::res://scripts/junction.gd<>uid://byqwrxtmyt6ql::::res://scenes/character.tscn<>uid://bdrhldmlhebet::::res://art/tilesets/plains.tres
+::res://scripts/::1724560662
+character.gd::GDScript::-1::1724550297::0::1::::<>CharacterBody2D<>::
+flower_ring.gd::GDScript::-1::1724550297::0::1::::<>Node2D<>::
+global.gd::GDScript::-1::1724550297::0::1::::<>Node<>::
+junction.gd::GDScript::-1::1724560662::0::1::::<>Node2D<>::

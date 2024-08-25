@@ -26,7 +26,7 @@ func change_scene_flower_ring():
 func firstload():
 	if Global.firstjunctionload == true:
 		$CharacterBody2D.position.x = -279
-		$CharacterBody2D.position.y = -233
+		$CharacterBody2D.position.y = -215
 		print("pain")
 		Global.firstjunctionload = false
 	else:
