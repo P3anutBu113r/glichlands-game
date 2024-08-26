@@ -84,7 +84,7 @@ func playanimation(movement):
 	if dir == "down":
 		anim.flip_h = false
 		if movement == 1:
-			anim.play("down idle")
+			anim.play("down walk")
 		elif movement == 0:
 			anim.play("down idle")
 	elif dir == "up":

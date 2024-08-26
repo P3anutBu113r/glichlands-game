@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://byqwrxtmyt6ql"]
+[gd_scene load_steps=18 format=3 uid="uid://byqwrxtmyt6ql"]
 
 [ext_resource type="Texture2D" uid="uid://c4i8g6inr645q" path="res://art/Character spritesheets/the guy/the guy.png" id="1_hpyxm"]
 [ext_resource type="Script" path="res://scripts/character.gd" id="1_tsvs4"]
 [ext_resource type="Texture2D" uid="uid://de114upjslulx" path="res://art/Character spritesheets/the guy/Right-Sideways-guy1-sheet.png" id="3_7j5o5"]
+[ext_resource type="Texture2D" uid="uid://cwo8klrmqcb4n" path="res://art/Character spritesheets/the guy/the guy walking-sheet.png" id="3_gunpy"]
 [ext_resource type="Texture2D" uid="uid://btt12jfiyqha7" path="res://art/Character spritesheets/the guy/the guy up idle.png" id="3_pqy8k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vbbgd"]
@@ -12,6 +13,22 @@ region = Rect2(0, 0, 16, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_nyxsg"]
 atlas = ExtResource("1_hpyxm")
 region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x8ulv"]
+atlas = ExtResource("3_gunpy")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_woams"]
+atlas = ExtResource("3_gunpy")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6x68y"]
+atlas = ExtResource("3_gunpy")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rh1ul"]
+atlas = ExtResource("3_gunpy")
+region = Rect2(48, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6lws4"]
 atlas = ExtResource("3_7j5o5")
@@ -41,6 +58,23 @@ animations = [{
 "loop": true,
 "name": &"down idle",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x8ulv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_woams")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6x68y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rh1ul")
+}],
+"loop": true,
+"name": &"down walk",
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -76,7 +110,8 @@ y_sort_enabled = true
 position = Vector2(0, -5)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_ncipj")
-animation = &"down idle"
+animation = &"down walk"
+frame_progress = 0.208117
 
 [node name="dashTimer" type="Timer" parent="."]
 wait_time = 3.0

@@ -13,7 +13,6 @@ func _on_flower_ring_transition_body_entered(body):
 		$CharacterBody2D.position.y = 191
 		Global.transition_scene = true
 
-
 func _on_flower_ring_transition_body_exited(body):
 	if body.has_method("player"):
 		Global.transition_scene = false
