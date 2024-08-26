@@ -1,7 +1,7 @@
 CollisionShape2D
+Area2D
 AnimatedSprite2D
 CharacterBody2D
-Area2D
 CollisionPolygon2D
 StaticBody2D
 Camera2D
