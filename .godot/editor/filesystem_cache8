@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1724747123
+::res://::1724799732
 export_presets.cfg::TextFile::-1::1724665698::0::1::::<><>::
 icon.svg::CompressedTexture2D::5392545246896395256::1723192801::1723192801::1::::<><>::
 README.md::TextFile::-1::1724371007::0::1::::<><>::
@@ -25,17 +25,17 @@ hills.png::CompressedTexture2D::1260720140829544026::1724332572::1724332578::1::
 path & grass.png::CompressedTexture2D::5479747777143124264::1724320024::1724320024::1::::<><>::
 slimeidle.png::CompressedTexture2D::2046364062935764620::1724665699::1724665699::1::::<><>::
 tileset 2.png::CompressedTexture2D::3053982576288483573::1724324164::1724332582::1::::<><>::
-::res://art/tilesets/::1724746470
-plains.tres::TileSet::2632526475725539471::1724746470::0::1::::<><>::uid://bsaas6nruknw4::::res://art/objects/plains trees.png<>uid://ckcov67odbexs::::res://art/tilemap/path & grass.png<>uid://bjrmv80mjymbt::::res://art/tilemap/tileset 2.png<>uid://d0mscqqjmlt0f::::res://art/objects/The rock sprite.png<>uid://r7x42i8f7kys::::res://art/tilemap/hills.png<>uid://bul50psdfedr4::::res://art/objects/grassland bushes.png<>uid://ba3kw37k08ad5::::res://art/tilemap/Hills ladder.png
-::res://scenes/::1724746470
-character.tscn::PackedScene::4105350345374497663::1724746470::0::1::::<><>::uid://c4i8g6inr645q::::res://art/Character spritesheets/the guy/the guy.png<>res://scripts/character.gd<>uid://de114upjslulx::::res://art/Character spritesheets/the guy/Right-Sideways-guy1-sheet.png<>uid://cwo8klrmqcb4n::::res://art/Character spritesheets/the guy/the guy walking-sheet.png<>uid://btt12jfiyqha7::::res://art/Character spritesheets/the guy/the guy up idle.png<>uid://vr0502el1pev::::res://art/Character spritesheets/the guy/Left-Sideways-guy1-sheet-sheet.png<>uid://cy436emcu3h7g::::res://art/Character spritesheets/the guy/the guy behind walking1-sheet-sheet.png
-flower_ring.tscn::PackedScene::282066037275744810::1724674261::0::1::::<><>::res://scripts/flower_ring.gd<>uid://byqwrxtmyt6ql::::res://scenes/character.tscn<>uid://bdrhldmlhebet::::res://art/tilesets/plains.tres
-green_slime.tscn::PackedScene::3280519166627783871::1724746470::0::1::::<><>::res://scripts/slime.gd<>uid://ckcpwop4xluv7::::res://art/Character spritesheets/slime/slimeidle.png<>uid://dm7stlw782uwd::::res://art/Character spritesheets/slime/slimejump.png
-junction.tscn::PackedScene::7748854593856326657::1724746470::0::1::::<><>::res://scripts/junction.gd<>uid://byqwrxtmyt6ql::::res://scenes/character.tscn<>uid://bdrhldmlhebet::::res://art/tilesets/plains.tres<>uid://bm0dw3edj6qxj::::res://scenes/green_slime.tscn
-::res://scripts/::1724746470
-character.gd::GDScript::-1::1724746470::0::1::::<>CharacterBody2D<>::
-flower_ring.gd::GDScript::-1::1724545614::0::1::::<>Node2D<>::
-global.gd::GDScript::-1::1724549249::0::1::::<>Node<>::
+::res://art/tilesets/::1724747365
+plains.tres::TileSet::2632526475725539471::1724747365::0::1::::<><>::uid://bsaas6nruknw4::::res://art/objects/plains trees.png<>uid://ckcov67odbexs::::res://art/tilemap/path & grass.png<>uid://bjrmv80mjymbt::::res://art/tilemap/tileset 2.png<>uid://d0mscqqjmlt0f::::res://art/objects/The rock sprite.png<>uid://r7x42i8f7kys::::res://art/tilemap/hills.png<>uid://bul50psdfedr4::::res://art/objects/grassland bushes.png<>uid://ba3kw37k08ad5::::res://art/tilemap/Hills ladder.png
+::res://scenes/::1724759576
+character.tscn::PackedScene::4105350345374497663::1724759576::0::1::::<><>::uid://c4i8g6inr645q::::res://art/Character spritesheets/the guy/the guy.png<>res://scripts/character.gd<>uid://de114upjslulx::::res://art/Character spritesheets/the guy/Right-Sideways-guy1-sheet.png<>uid://cwo8klrmqcb4n::::res://art/Character spritesheets/the guy/the guy walking-sheet.png<>uid://btt12jfiyqha7::::res://art/Character spritesheets/the guy/the guy up idle.png<>uid://vr0502el1pev::::res://art/Character spritesheets/the guy/Left-Sideways-guy1-sheet-sheet.png<>uid://cy436emcu3h7g::::res://art/Character spritesheets/the guy/the guy behind walking1-sheet-sheet.png
+flower_ring.tscn::PackedScene::282066037275744810::1724759576::0::1::::<><>::res://scripts/flower_ring.gd<>uid://byqwrxtmyt6ql::::res://scenes/character.tscn<>uid://bdrhldmlhebet::::res://art/tilesets/plains.tres
+green_slime.tscn::PackedScene::3280519166627783871::1724759576::0::1::::<><>::res://scripts/slime.gd<>uid://ckcpwop4xluv7::::res://art/Character spritesheets/slime/slimeidle.png<>uid://dm7stlw782uwd::::res://art/Character spritesheets/slime/slimejump.png
+junction.tscn::PackedScene::7748854593856326657::1724759576::0::1::::<><>::res://scripts/junction.gd<>uid://byqwrxtmyt6ql::::res://scenes/character.tscn<>uid://bdrhldmlhebet::::res://art/tilesets/plains.tres<>uid://bm0dw3edj6qxj::::res://scenes/green_slime.tscn
+::res://scripts/::1724759575
+character.gd::GDScript::-1::1724759575::0::1::::<>CharacterBody2D<>::
+flower_ring.gd::GDScript::-1::1724758436::0::1::::<>Node2D<>::
+global.gd::GDScript::-1::1724757635::0::1::::<>Node<>::
 junction.gd::GDScript::-1::1724665699::0::1::::<>Node2D<>::
-slime.gd::GDScript::-1::1724746470::0::1::::<>CharacterBody2D<>::
+slime.gd::GDScript::-1::1724759288::0::1::::<>CharacterBody2D<>::
 the guy walking-sheet.png::CompressedTexture2D::8753395163142622793::1724665699::1724665699::1::::<><>::

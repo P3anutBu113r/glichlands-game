@@ -1,9 +1,11 @@
 extends CharacterBody2D
-var speed = 50
+@export var speed = 50
 var player_chase = false
 var player = null
 var combat = false
 var attack_cooldown = true
+var player_in_attack_zone = false
+var health = 100
 @onready var anim = $AnimatedSprite2D
 func _ready():
 	$AnimatedSprite2D.play("slime_idle")
@@ -51,6 +53,7 @@ func _on_detection_area_body_exited(body):
 func _on_combat_hitbox_body_entered(body):
 	if body.has_method("player"):
 		combat = true
+		player_in_attack_zone = true
 
 func attack():
 	if combat and attack_cooldown:
@@ -63,7 +66,13 @@ func attack():
 
 func _on_combat_hitbox_body_exited(body):
 	combat = false
+	player_in_attack_zone = false
 
 
 func _on_attack_cooldown_timeout():
 	attack_cooldown = true
+
+func take_damage():
+	if player_in_attack_zone and Global.player_attacking:
+		health = health - player.damage
+		

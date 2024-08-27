@@ -3,6 +3,7 @@ extends CharacterBody2D
 var enemy_inattack_range = false
 var enemy_type = "none"#approach the undeleatable gap
 var health = 100
+var damage = 20
 
 const speed = 100
 var current_dirrection = "down"
@@ -17,7 +18,8 @@ func _physics_process(delta):
 	
 	if health <= 0:
 		print ("game over")
-		get_tree().quit()
+		health = 0
+		
 
 
 	
