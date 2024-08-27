@@ -4,4 +4,6 @@ res://scenes/flower_ring.tscn
 res://scenes/junction.tscn
 res://scenes/green_slime.tscn
 res://scripts/slime.gd
-res://scripts/clasic enemy.gd
+res://scripts/character.gd
+res://scripts/global.gd
+res://scripts/flower_ring.gd

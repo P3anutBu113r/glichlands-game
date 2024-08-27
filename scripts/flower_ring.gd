@@ -9,6 +9,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	change_scenes()
+	
 
 
 func _on_flower_ring_exit_body_entered(body):

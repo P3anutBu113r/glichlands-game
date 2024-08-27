@@ -1,13 +1,23 @@
 extends CharacterBody2D
+#the initiation of the variables
+var enemy_inattack_range = false
+var enemy_type = "none"#approach the undeleatable gap
+var health = 100
 
 const speed = 100
 var current_dirrection = "down"
 var dashcooldown = true
+
 func _ready():
 	$AnimatedSprite2D.play("down idle")
+	health = Global.player_max_health
 
 func _physics_process(delta):
 	player_movement(delta)
+	
+	if health <= 0:
+		print ("game over")
+		get_tree().quit()
 
 
 	
@@ -109,6 +119,28 @@ func playanimation(movement):
 			anim.play("side idle")
 		
 
+
+
+
+func _on_combat_hitbox_body_entered(body):
+	if body.has_method("enemy"):
+		enemy_inattack_range = true
+		if body.has_method("green_slime"):
+			enemy_type = ("green_slime")
+
+
+func _on_combat_hitbox_body_exited(body):
+	if body.has_method("enemy"):
+		enemy_inattack_range = false
+		
+#the damage list ...
+
+			
 	
 	
-	
+#health = health - 10
+				#green_slime_cooldown = false
+				#$"green slime attack cooldown".start()
+				#print("your health is ", health)
+
+

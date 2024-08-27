@@ -5,6 +5,7 @@ var transition_scene = false
 func _physics_process(delta):
 	null
 var firstjunctionload = true
+var player_max_health = 100
 
 var flower_ring_exit_x = 108
 var flower_ring_exit_y = 193

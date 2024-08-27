@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://byqwrxtmyt6ql"]
+[gd_scene load_steps=27 format=3 uid="uid://byqwrxtmyt6ql"]
 
 [ext_resource type="Texture2D" uid="uid://c4i8g6inr645q" path="res://art/Character spritesheets/the guy/the guy.png" id="1_hpyxm"]
 [ext_resource type="Script" path="res://scripts/character.gd" id="1_tsvs4"]
@@ -156,6 +156,9 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_k6git"]
 radius = 3.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_led8w"]
+radius = 11.1803
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 collision_layer = 3
 script = ExtResource("1_tsvs4")
@@ -174,4 +177,12 @@ autostart = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_k6git")
 
+[node name="combat_hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="combat_hitbox"]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_led8w")
+
 [connection signal="timeout" from="dashTimer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="combat_hitbox" to="." method="_on_combat_hitbox_body_entered"]
+[connection signal="body_exited" from="combat_hitbox" to="." method="_on_combat_hitbox_body_exited"]

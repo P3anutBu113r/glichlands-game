@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bm0dw3edj6qxj"]
+[gd_scene load_steps=22 format=3 uid="uid://bm0dw3edj6qxj"]
 
 [ext_resource type="Script" path="res://scripts/slime.gd" id="1_6r1ku"]
 [ext_resource type="Texture2D" uid="uid://ckcpwop4xluv7" path="res://art/Character spritesheets/slime/slimeidle.png" id="1_aclco"]
@@ -121,6 +121,9 @@ radius = 4.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_eccq2"]
 radius = 101.02
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_kncrw"]
+radius = 11.0
+
 [node name="green slime" type="CharacterBody2D"]
 script = ExtResource("1_6r1ku")
 
@@ -143,6 +146,17 @@ collision_mask = 2
 position = Vector2(0, 6)
 shape = SubResource("CircleShape2D_eccq2")
 
+[node name="combat_hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="combat_hitbox"]
+position = Vector2(0, -4)
+shape = SubResource("CircleShape2D_kncrw")
+
+[node name="attack cooldown" type="Timer" parent="."]
+
 [connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]
 [connection signal="body_entered" from="detection area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detection area" to="." method="_on_detection_area_body_exited"]
+[connection signal="body_entered" from="combat_hitbox" to="." method="_on_combat_hitbox_body_entered"]
+[connection signal="body_exited" from="combat_hitbox" to="." method="_on_combat_hitbox_body_exited"]
+[connection signal="timeout" from="attack cooldown" to="." method="_on_attack_cooldown_timeout"]
