@@ -1,10 +1,12 @@
-[gd_scene load_steps=18 format=3 uid="uid://byqwrxtmyt6ql"]
+[gd_scene load_steps=26 format=3 uid="uid://byqwrxtmyt6ql"]
 
 [ext_resource type="Texture2D" uid="uid://c4i8g6inr645q" path="res://art/Character spritesheets/the guy/the guy.png" id="1_hpyxm"]
 [ext_resource type="Script" path="res://scripts/character.gd" id="1_tsvs4"]
 [ext_resource type="Texture2D" uid="uid://de114upjslulx" path="res://art/Character spritesheets/the guy/Right-Sideways-guy1-sheet.png" id="3_7j5o5"]
 [ext_resource type="Texture2D" uid="uid://cwo8klrmqcb4n" path="res://art/Character spritesheets/the guy/the guy walking-sheet.png" id="3_gunpy"]
 [ext_resource type="Texture2D" uid="uid://btt12jfiyqha7" path="res://art/Character spritesheets/the guy/the guy up idle.png" id="3_pqy8k"]
+[ext_resource type="Texture2D" uid="uid://vr0502el1pev" path="res://art/Character spritesheets/the guy/Left-Sideways-guy1-sheet-sheet.png" id="5_35v0i"]
+[ext_resource type="Texture2D" uid="uid://cy436emcu3h7g" path="res://art/Character spritesheets/the guy/the guy behind walking1-sheet-sheet.png" id="7_qk2ia"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vbbgd"]
 atlas = ExtResource("1_hpyxm")
@@ -38,6 +40,14 @@ region = Rect2(0, 0, 32, 32)
 atlas = ExtResource("3_7j5o5")
 region = Rect2(32, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_wn3sh"]
+atlas = ExtResource("5_35v0i")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p013p"]
+atlas = ExtResource("5_35v0i")
+region = Rect2(16, 0, 16, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_tgvrc"]
 atlas = ExtResource("3_pqy8k")
 region = Rect2(0, 0, 16, 32)
@@ -45,6 +55,22 @@ region = Rect2(0, 0, 16, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_xdji0"]
 atlas = ExtResource("3_pqy8k")
 region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ni7uo"]
+atlas = ExtResource("7_qk2ia")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aufx5"]
+atlas = ExtResource("7_qk2ia")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dxuep"]
+atlas = ExtResource("7_qk2ia")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tk50r"]
+atlas = ExtResource("7_qk2ia")
+region = Rect2(48, 0, 16, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ncipj"]
 animations = [{
@@ -89,6 +115,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_wn3sh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p013p")
+}],
+"loop": true,
+"name": &"side walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_tgvrc")
 }, {
 "duration": 1.0,
@@ -96,6 +133,23 @@ animations = [{
 }],
 "loop": true,
 "name": &"up idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ni7uo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aufx5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dxuep")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tk50r")
+}],
+"loop": true,
+"name": &"up walk",
 "speed": 5.0
 }]
 
@@ -111,8 +165,7 @@ y_sort_enabled = true
 position = Vector2(0, -5)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_ncipj")
-animation = &"down walk"
-frame_progress = 0.208117
+animation = &"up walk"
 
 [node name="dashTimer" type="Timer" parent="."]
 wait_time = 3.0

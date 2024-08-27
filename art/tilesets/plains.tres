@@ -1,8 +1,9 @@
-[gd_resource type="TileSet" load_steps=13 format=3 uid="uid://bdrhldmlhebet"]
+[gd_resource type="TileSet" load_steps=15 format=3 uid="uid://bdrhldmlhebet"]
 
 [ext_resource type="Texture2D" uid="uid://bsaas6nruknw4" path="res://art/objects/plains trees.png" id="1_viktp"]
 [ext_resource type="Texture2D" uid="uid://ckcov67odbexs" path="res://art/tilemap/path & grass.png" id="2_dga1t"]
 [ext_resource type="Texture2D" uid="uid://bjrmv80mjymbt" path="res://art/tilemap/tileset 2.png" id="3_fqhq6"]
+[ext_resource type="Texture2D" uid="uid://d0mscqqjmlt0f" path="res://art/objects/The rock sprite.png" id="4_8ntn1"]
 [ext_resource type="Texture2D" uid="uid://r7x42i8f7kys" path="res://art/tilemap/hills.png" id="4_rqgmf"]
 [ext_resource type="Texture2D" uid="uid://bul50psdfedr4" path="res://art/objects/grassland bushes.png" id="5_2mu6e"]
 [ext_resource type="Texture2D" uid="uid://ba3kw37k08ad5" path="res://art/tilemap/Hills ladder.png" id="6_cklej"]
@@ -99,6 +100,14 @@ texture = ExtResource("3_fqhq6")
 5:2/0 = 0
 5:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:2/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qox53"]
+texture = ExtResource("4_8ntn1")
+0:0/0 = 0
+0:0/0/y_sort_origin = 4
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.3125, 8, 3.5625, 8, 3.5625, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5x7fy"]
 texture = ExtResource("4_rqgmf")
@@ -269,3 +278,4 @@ sources/4 = SubResource("TileSetAtlasSource_5x7fy")
 sources/5 = SubResource("TileSetAtlasSource_fhqkb")
 sources/8 = SubResource("TileSetAtlasSource_h6yg1")
 sources/0 = SubResource("TileSetAtlasSource_d54rc")
+sources/3 = SubResource("TileSetAtlasSource_qox53")

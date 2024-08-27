@@ -1,6 +1,7 @@
-res://scenes/green_slime.tscn
-res://art/tilesets/plains.tres
-res://scripts/slime.gd
 res://scenes/character.tscn
+res://art/tilesets/plains.tres
 res://scenes/flower_ring.tscn
 res://scenes/junction.tscn
+res://scenes/green_slime.tscn
+res://scripts/slime.gd
+res://scripts/clasic enemy.gd

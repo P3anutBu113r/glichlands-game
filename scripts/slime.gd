@@ -1,5 +1,5 @@
 extends CharacterBody2D
-var speed = 75
+var speed = 50
 var player_chase = false
 var player = null
 @onready var anim = $AnimatedSprite2D
