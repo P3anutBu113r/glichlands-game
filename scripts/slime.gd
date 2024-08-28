@@ -6,12 +6,18 @@ var combat = false
 var attack_cooldown = true
 var player_in_attack_zone = false
 var health = 100
+
 @onready var anim = $AnimatedSprite2D
 func _ready():
 	$AnimatedSprite2D.play("slime_idle")
 func _physics_process(delta):
 	attack()
 	movement(delta)
+	take_damage()
+	
+	if health <= 0:
+		print("slime dead")
+		queue_free()
 
 		
 
@@ -21,7 +27,7 @@ func _physics_process(delta):
 		#move_and_slide()
 		
 func movement(delta):
-	if player_chase:
+	if player_chase and player_in_attack_zone == false:
 		position += (player.position - position).normalized() * speed * delta
 		move_and_collide(Vector2(0,0)) 
 		anim.play("slime_jump")
@@ -73,6 +79,9 @@ func _on_attack_cooldown_timeout():
 	attack_cooldown = true
 
 func take_damage():
-	if player_in_attack_zone and Global.player_attacking:
+	if player_in_attack_zone and Global.player_attacking == true:
 		health = health - player.damage
+		Global.player_attacking = false
+		print("the slimes health is ", health)
+		
 		

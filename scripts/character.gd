@@ -4,6 +4,7 @@ var enemy_inattack_range = false
 var enemy_type = "none"#approach the undeleatable gap
 var health = 100
 var damage = 20
+var attack_cooldown = true
 
 const speed = 100
 var current_dirrection = "down"
@@ -15,10 +16,14 @@ func _ready():
 
 func _physics_process(delta):
 	player_movement(delta)
+	attack()
+	attackannimation()
+	
 	
 	if health <= 0:
 		print ("game over")
 		health = 0
+		queue_free()
 		
 
 
@@ -135,14 +140,26 @@ func _on_combat_hitbox_body_exited(body):
 	if body.has_method("enemy"):
 		enemy_inattack_range = false
 		
-#the damage list ...
-
+func attack():
+	if Input.is_action_just_pressed("attack"):
+		if attack_cooldown == true:
+			Global.player_attacking = true
+			attack_cooldown = false
+			
+			
+			$weapon_cooldown.start()
 			
 	
 	
-#health = health - 10
-				#green_slime_cooldown = false
-				#$"green slime attack cooldown".start()
-				#print("your health is ", health)
+func attackannimation():
+	if Global.player_attacking:
+		if current_dirrection == "down":
+			$"sword sprites/sword".play("Wood sword down")
 
 
+
+
+func _on_weapon_cooldown_timeout():
+	attack_cooldown = true
+	Global.player_attacking = false
+	

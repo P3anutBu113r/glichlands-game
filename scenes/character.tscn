@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://byqwrxtmyt6ql"]
+[gd_scene load_steps=30 format=3 uid="uid://byqwrxtmyt6ql"]
 
 [ext_resource type="Texture2D" uid="uid://c4i8g6inr645q" path="res://art/Character spritesheets/the guy/the guy.png" id="1_hpyxm"]
 [ext_resource type="Script" path="res://scripts/character.gd" id="1_tsvs4"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://btt12jfiyqha7" path="res://art/Character spritesheets/the guy/the guy up idle.png" id="3_pqy8k"]
 [ext_resource type="Texture2D" uid="uid://vr0502el1pev" path="res://art/Character spritesheets/the guy/Left-Sideways-guy1-sheet-sheet.png" id="5_35v0i"]
 [ext_resource type="Texture2D" uid="uid://cy436emcu3h7g" path="res://art/Character spritesheets/the guy/the guy behind walking1-sheet-sheet.png" id="7_qk2ia"]
+[ext_resource type="Texture2D" uid="uid://d12o3rc4nnlpt" path="res://art/Weapons/wood sword 1.png" id="8_e344q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vbbgd"]
 atlas = ExtResource("1_hpyxm")
@@ -157,7 +158,39 @@ animations = [{
 radius = 3.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_led8w"]
-radius = 11.1803
+
+[sub_resource type="Animation" id="Animation_v8f5i"]
+resource_name = "Wood sword down"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sword sprites:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00181474, 0.253459, 0.497239),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(6, 2), Vector2(0, 7), Vector2(-9, 4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sword sprites:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.00181474, 0.257693, 0.498448),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.733249, 2.287, 3.91652]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_21a2q"]
+_data = {
+"Wood sword down": SubResource("Animation_v8f5i")
+}
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 collision_layer = 3
@@ -168,7 +201,7 @@ y_sort_enabled = true
 position = Vector2(0, -5)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_ncipj")
-animation = &"up walk"
+animation = &"down idle"
 
 [node name="dashTimer" type="Timer" parent="."]
 wait_time = 3.0
@@ -183,6 +216,22 @@ shape = SubResource("CircleShape2D_k6git")
 position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_led8w")
 
+[node name="sword sprites" type="Sprite2D" parent="."]
+position = Vector2(6, 2)
+rotation = 0.733249
+scale = Vector2(0.8, 0.701)
+texture = ExtResource("8_e344q")
+
+[node name="sword" type="AnimationPlayer" parent="sword sprites"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_21a2q")
+}
+
+[node name="weapon_cooldown" type="Timer" parent="."]
+wait_time = 0.5
+
 [connection signal="timeout" from="dashTimer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="combat_hitbox" to="." method="_on_combat_hitbox_body_entered"]
 [connection signal="body_exited" from="combat_hitbox" to="." method="_on_combat_hitbox_body_exited"]
+[connection signal="timeout" from="weapon_cooldown" to="." method="_on_weapon_cooldown_timeout"]

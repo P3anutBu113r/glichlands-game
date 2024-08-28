@@ -153,6 +153,7 @@ position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_kncrw")
 
 [node name="attack cooldown" type="Timer" parent="."]
+wait_time = 3.0
 
 [connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]
 [connection signal="body_entered" from="detection area" to="." method="_on_detection_area_body_entered"]
