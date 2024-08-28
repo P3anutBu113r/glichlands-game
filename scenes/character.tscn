@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://byqwrxtmyt6ql"]
+[gd_scene load_steps=33 format=3 uid="uid://byqwrxtmyt6ql"]
 
 [ext_resource type="Texture2D" uid="uid://c4i8g6inr645q" path="res://art/Character spritesheets/the guy/the guy.png" id="1_hpyxm"]
 [ext_resource type="Script" path="res://scripts/character.gd" id="1_tsvs4"]
@@ -158,6 +158,35 @@ animations = [{
 radius = 3.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_led8w"]
+radius = 11.1803
+
+[sub_resource type="Animation" id="Animation_r4goc"]
+resource_name = "Sword up"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sword sprites:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(13, -14), Vector2(0, -24), Vector2(-12, -14)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sword sprites:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.733249, -0.855211, -2.35288]
+}
 
 [sub_resource type="Animation" id="Animation_v8f5i"]
 resource_name = "Wood sword down"
@@ -169,7 +198,7 @@ tracks/0/path = NodePath("sword sprites:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.00181474, 0.253459, 0.497239),
+"times": PackedFloat32Array(0.00181474, 0.3, 0.497239),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(6, 2), Vector2(0, 7), Vector2(-9, 4)]
@@ -181,15 +210,74 @@ tracks/1/path = NodePath("sword sprites:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.00181474, 0.257693, 0.498448),
+"times": PackedFloat32Array(0.00181474, 0.3, 0.498448),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [0.733249, 2.287, 3.91652]
 }
 
+[sub_resource type="Animation" id="Animation_w4k42"]
+resource_name = "left sword"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sword sprites:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(8, -21), Vector2(14, -5), Vector2(9, 4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sword sprites:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.774565, 0.782798, 2.3351]
+}
+
+[sub_resource type="Animation" id="Animation_7l6uo"]
+resource_name = "sword right"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sword sprites:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-7, 8), Vector2(-14, -3), Vector2(-9, -14)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sword sprites:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [2.3351, 3.93847, 5.49692]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_21a2q"]
 _data = {
-"Wood sword down": SubResource("Animation_v8f5i")
+"Sword up": SubResource("Animation_r4goc"),
+"Wood sword down": SubResource("Animation_v8f5i"),
+"left sword": SubResource("Animation_w4k42"),
+"sword right": SubResource("Animation_7l6uo")
 }
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
@@ -217,9 +305,9 @@ position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_led8w")
 
 [node name="sword sprites" type="Sprite2D" parent="."]
-position = Vector2(6, 2)
-rotation = 0.733249
-scale = Vector2(0.8, 0.701)
+position = Vector2(-9, -14)
+rotation = 5.49692
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("8_e344q")
 
 [node name="sword" type="AnimationPlayer" parent="sword sprites"]

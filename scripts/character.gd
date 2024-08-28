@@ -155,6 +155,12 @@ func attackannimation():
 	if Global.player_attacking:
 		if current_dirrection == "down":
 			$"sword sprites/sword".play("Wood sword down")
+		if current_dirrection == "up":
+			$"sword sprites/sword".play_backwards("Sword up")
+		if current_dirrection == "right":
+			$"sword sprites/sword".play("left sword")
+		if current_dirrection == "left":
+			$"sword sprites/sword".play("sword right")
 
 
 
@@ -162,4 +168,7 @@ func attackannimation():
 func _on_weapon_cooldown_timeout():
 	attack_cooldown = true
 	Global.player_attacking = false
+	
+func current_weapon():
+	null
 	

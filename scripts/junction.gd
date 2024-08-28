@@ -26,7 +26,7 @@ func firstload():
 	if Global.firstjunctionload == true:
 		$CharacterBody2D.position.x = -279
 		$CharacterBody2D.position.y = -215
-		print("pain")
+		
 		Global.firstjunctionload = false
 	else:
 		$CharacterBody2D.position.x = Global.flower_ring_exit_x

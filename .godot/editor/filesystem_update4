@@ -1,6 +1,5 @@
-res://scenes/character.tscn
-res://art/tilesets/plains.tres
 res://scenes/flower_ring.tscn
+res://art/tilesets/plains.tres
 res://scenes/junction.tscn
 res://scenes/green_slime.tscn
-res://scripts/character.gd
+res://scenes/character.tscn
