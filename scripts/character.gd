@@ -5,6 +5,10 @@ var enemy_type = "none"#approach the undeleatable gap
 var health = 100
 var damage = 20
 var attack_cooldown = true
+var attack_animation = true
+var player_hurt_active = false
+var moving = true
+var enemy = "body"
 
 const speed = 100
 var current_dirrection = "down"
@@ -13,11 +17,13 @@ var dashcooldown = true
 func _ready():
 	$AnimatedSprite2D.play("down idle")
 	health = Global.player_max_health
+	$"sword sprites".hide()
 
 func _physics_process(delta):
 	player_movement(delta)
 	attack()
 	attackannimation()
+	player_knockback(delta)
 	
 	
 	if health <= 0:
@@ -30,40 +36,51 @@ func _physics_process(delta):
 	
 	
 func player_movement(delta):
-	if Input.is_action_just_pressed("space"):
-		dash(delta)
-	elif Input.is_action_pressed("ui_right"):
-		current_dirrection = "right"
-		playanimation(1)
-		velocity.x = speed
-		velocity.y = 0
-	elif Input.is_action_pressed("ui_left"):
-		current_dirrection = "left"
-		playanimation(1)
-		velocity.x = -speed
-		velocity.y = 0
-	elif Input.is_action_pressed("ui_down"):
-		current_dirrection = "down"
-		playanimation(1)
-		velocity.x = 0
-		velocity.y = speed
-	elif Input.is_action_pressed("ui_up"):
-		current_dirrection = "up"
-		playanimation(1)
-		velocity.x = 0
-		velocity.y = -speed
-	
-	else:
-		playanimation(0)
-		velocity.x = 0
-		velocity.y = 0
+	if moving:
+		if Input.is_action_just_pressed("space"):
+			dash(delta)
+		elif Input.is_action_pressed("ui_right"):
+			current_dirrection = "right"
+			playanimation(1)
+			velocity.x = speed
+			velocity.y = 0
+		elif Input.is_action_pressed("ui_left"):
+			current_dirrection = "left"
+			playanimation(1)
+			velocity.x = -speed
+			velocity.y = 0
+		elif Input.is_action_pressed("ui_down"):
+			current_dirrection = "down"
+			playanimation(1)
+			velocity.x = 0
+			velocity.y = speed
+		elif Input.is_action_pressed("ui_up"):
+			current_dirrection = "up"
+			playanimation(1)
+			velocity.x = 0
+			velocity.y = -speed
 		
-	move_and_slide()
+		else:
+			playanimation(0)
+			velocity.x = 0
+			velocity.y = 0
+			
+		move_and_slide()
 func player():
 	pass
 #dashing
 # Called when the node enters the scene tree for the first time
-	pass # Replace with function body.
+
+func player_knockback(delta):
+	if player_hurt_active:
+		
+		$knockback_timer.start()
+		moving = false
+		position -= (enemy.position - position).normalized() * speed * delta
+		move_and_collide(Vector2(0,0)) 
+		
+		
+		
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -134,6 +151,7 @@ func _on_combat_hitbox_body_entered(body):
 		enemy_inattack_range = true
 		if body.has_method("green_slime"):
 			enemy_type = ("green_slime")
+			enemy = body
 
 
 func _on_combat_hitbox_body_exited(body):
@@ -147,20 +165,27 @@ func attack():
 			attack_cooldown = false
 			
 			
+			
 			$weapon_cooldown.start()
 			
 	
 	
 func attackannimation():
 	if Global.player_attacking:
+		$"sword sprites".show()
 		if current_dirrection == "down":
+			Global.player_attack_dirrection = "down"
 			$"sword sprites/sword".play("Wood sword down")
 		if current_dirrection == "up":
+			Global.player_attack_dirrection = "up"
 			$"sword sprites/sword".play_backwards("Sword up")
 		if current_dirrection == "right":
+			Global.player_attack_dirrection = "right"
 			$"sword sprites/sword".play("left sword")
 		if current_dirrection == "left":
+			Global.player_attack_dirrection = "left"
 			$"sword sprites/sword".play("sword right")
+
 
 
 
@@ -172,3 +197,17 @@ func _on_weapon_cooldown_timeout():
 func current_weapon():
 	null
 	
+
+
+func _on_sword_animation_finished(anim_name):
+	$"sword sprites".hide()
+
+
+
+ 
+
+
+func _on_knockback_timer_timeout():
+	player_hurt_active = false
+	moving = true
+	print("timer_working")

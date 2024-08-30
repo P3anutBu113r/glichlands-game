@@ -1,12 +1,17 @@
-[gd_scene load_steps=25 format=3 uid="uid://bm0dw3edj6qxj"]
+[gd_scene load_steps=27 format=3 uid="uid://bm0dw3edj6qxj"]
 
 [ext_resource type="Script" path="res://scripts/slime.gd" id="1_6r1ku"]
 [ext_resource type="Texture2D" uid="uid://ckcpwop4xluv7" path="res://art/Character spritesheets/slime/slimeidle.png" id="1_aclco"]
 [ext_resource type="Texture2D" uid="uid://dl3f3ebi5rx6" path="res://art/Character spritesheets/slime/slime aleart.png" id="2_wyqtr"]
+[ext_resource type="Texture2D" uid="uid://bum2cahplv0r6" path="res://art/Character spritesheets/slime/slime_hurt.png" id="3_e61ee"]
 [ext_resource type="Texture2D" uid="uid://dm7stlw782uwd" path="res://art/Character spritesheets/slime/slimejump.png" id="3_klu83"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s6e55"]
 atlas = ExtResource("2_wyqtr")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qjmq"]
+atlas = ExtResource("3_e61ee")
 region = Rect2(0, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vbjct"]
@@ -77,6 +82,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_1qjmq")
+}],
+"loop": true,
+"name": &"slime_hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_vbjct")
 }, {
 "duration": 1.0,
@@ -135,7 +148,7 @@ radius = 4.0
 radius = 101.02
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kncrw"]
-radius = 11.0
+radius = 18.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mhkwx"]
 radius = 23.0
@@ -146,7 +159,7 @@ script = ExtResource("1_6r1ku")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -14)
 sprite_frames = SubResource("SpriteFrames_a7yeo")
-animation = &"slime_aleart"
+animation = &"slime_hurt"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -3)
@@ -169,11 +182,13 @@ shape = SubResource("CircleShape2D_kncrw")
 
 [node name="attack cooldown" type="Timer" parent="."]
 
-[node name="warning timer" type="Timer" parent="."]
-wait_time = 0.5
+[node name="slime_hurt_timer" type="Timer" parent="."]
+wait_time = 0.1
 one_shot = true
 
-[node name="Timer" type="Timer" parent="warning timer"]
+[node name="warning timer" type="Timer" parent="."]
+wait_time = 0.7
+one_shot = true
 
 [node name="hurt range" type="Area2D" parent="."]
 
@@ -187,6 +202,7 @@ shape = SubResource("CircleShape2D_mhkwx")
 [connection signal="body_entered" from="combat_hitbox" to="." method="_on_combat_hitbox_body_entered"]
 [connection signal="body_exited" from="combat_hitbox" to="." method="_on_combat_hitbox_body_exited"]
 [connection signal="timeout" from="attack cooldown" to="." method="_on_attack_cooldown_timeout"]
+[connection signal="timeout" from="slime_hurt_timer" to="." method="_on_slime_hurt_timer_timeout"]
 [connection signal="timeout" from="warning timer" to="." method="_on_warning_timer_timeout"]
 [connection signal="body_entered" from="hurt range" to="." method="_on_hurt_range_body_entered"]
 [connection signal="body_exited" from="hurt range" to="." method="_on_hurt_range_body_exited"]
