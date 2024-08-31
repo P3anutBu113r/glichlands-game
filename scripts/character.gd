@@ -1,7 +1,7 @@
 extends CharacterBody2D
 #the initiation of the variables
 var enemy_inattack_range = false
-var enemy_type = "none"#approach the undeleatable gap
+var enemy_type = "none"
 var health = 100
 var damage = 20
 var attack_cooldown = true
@@ -9,8 +9,13 @@ var attack_animation = true
 var player_hurt_active = false
 var moving = true
 var enemy = "body"
+var currently_under_knockback = false
+var current_weapon = "wood_sword"
+#approach the undeleatable gap
 
-const speed = 100
+const SPEED = 100 
+const acceleration = 5
+var input: Vector2
 var current_dirrection = "down"
 var dashcooldown = true
 
@@ -19,53 +24,57 @@ func _ready():
 	health = Global.player_max_health
 	$"sword sprites".hide()
 
+#ALL HAIL THE PHYSICS PROCESS
 func _physics_process(delta):
+	get_current_direction()
 	player_movement(delta)
 	attack()
 	attackannimation()
 	player_knockback(delta)
+	change_current_weapon()
+	health_processing()
+func get_input():
+	input.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
+	input.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
+	return input.normalized()
+func player_movement(delta):
+	var player_input = get_input()
+	if player_input == Vector2.ZERO:
+		velocity = Vector2.ZERO
+	else:
+		velocity = input * SPEED
 	
-	
+	move_and_slide()
+func health_processing():
+	$healthbar.value = health
+	if health >= Global.player_max_health:
+		$healthbar.hide()
+	else:
+		$healthbar.show()
 	if health <= 0:
 		print ("game over")
 		health = 0
 		queue_free()
-		
-
-
+	
+func get_current_direction():
+	if Input.is_action_pressed("ui_left"):
+		current_dirrection = "left"
+		playanimation(1)
+	elif Input.is_action_pressed("ui_right"):
+		current_dirrection = "right"
+		playanimation(1)
+	elif Input.is_action_pressed("ui_up"):
+		current_dirrection = "up"
+		playanimation(1)
+	elif Input.is_action_pressed("ui_down"):
+		current_dirrection = "down"
+		playanimation(1)
+	else:
+		playanimation(0)
 	
 	
-func player_movement(delta):
-	if moving:
-		if Input.is_action_just_pressed("space"):
-			dash(delta)
-		elif Input.is_action_pressed("ui_right"):
-			current_dirrection = "right"
-			playanimation(1)
-			velocity.x = speed
-			velocity.y = 0
-		elif Input.is_action_pressed("ui_left"):
-			current_dirrection = "left"
-			playanimation(1)
-			velocity.x = -speed
-			velocity.y = 0
-		elif Input.is_action_pressed("ui_down"):
-			current_dirrection = "down"
-			playanimation(1)
-			velocity.x = 0
-			velocity.y = speed
-		elif Input.is_action_pressed("ui_up"):
-			current_dirrection = "up"
-			playanimation(1)
-			velocity.x = 0
-			velocity.y = -speed
-		
-		else:
-			playanimation(0)
-			velocity.x = 0
-			velocity.y = 0
-			
-		move_and_slide()
+#fun
+
 func player():
 	pass
 #dashing
@@ -73,42 +82,31 @@ func player():
 
 func player_knockback(delta):
 	if player_hurt_active:
-		
-		$knockback_timer.start()
-		moving = false
-		position -= (enemy.position - position).normalized() * speed * delta
-		move_and_collide(Vector2(0,0)) 
-		
-		
-		
-
+		player_hurt_active = false
+		currently_under_knockback = true
+		$player_hurt_timer.start()
+		if currently_under_knockback:
+			moving = false
+			position -= (enemy.position - position).normalized() * 200 * delta
+			move_and_collide(Vector2(0,0)) 
+			if current_dirrection == "down":
+				$AnimatedSprite2D.flip_h = false
+				$AnimatedSprite2D.play("hurt_down")
+			if current_dirrection == "left":
+				$AnimatedSprite2D.flip_h = false
+				$AnimatedSprite2D.play("side_hurt")
+			if current_dirrection == "right":
+				$AnimatedSprite2D.flip_h = true
+				$AnimatedSprite2D.play("side_hurt")
+			if current_dirrection == "up":
+				$AnimatedSprite2D.flip_h = false
+				$AnimatedSprite2D.play("up_hurt")
+			
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-func dash(delta):
-	var dir = current_dirrection
-	if dashcooldown == true:
-		if dir == "up":
-			velocity.y = -1500
-			velocity.x = 0
-			dashcooldown = false
-			$dashTimer.start
-		if dir == "down":
-			velocity.y = 1500
-			velocity.x = 0
-			dashcooldown = false
-			$dashTimer.start
-		if dir == "left":
-			velocity.y = 0
-			velocity.x = -1500
-			dashcooldown = false
-			$dashTimer.start
-		if dir == "right":
-			velocity.y = 0
-			velocity.x = 1500
-			dashcooldown = false
-			$dashTimer.start
+
 func _on_timer_timeout():
 	dashcooldown = true
 
@@ -141,18 +139,13 @@ func playanimation(movement):
 			anim.play("side walk")
 		if movement == 0:
 			anim.play("side idle")
-		
-
-
-
-
+	
 func _on_combat_hitbox_body_entered(body):
 	if body.has_method("enemy"):
 		enemy_inattack_range = true
 		if body.has_method("green_slime"):
 			enemy_type = ("green_slime")
 			enemy = body
-
 
 func _on_combat_hitbox_body_exited(body):
 	if body.has_method("enemy"):
@@ -167,9 +160,7 @@ func attack():
 			
 			
 			$weapon_cooldown.start()
-			
-	
-	
+
 func attackannimation():
 	if Global.player_attacking:
 		$"sword sprites".show()
@@ -186,28 +177,20 @@ func attackannimation():
 			Global.player_attack_dirrection = "left"
 			$"sword sprites/sword".play("sword right")
 
-
-
-
-
 func _on_weapon_cooldown_timeout():
 	attack_cooldown = true
 	Global.player_attacking = false
 	
-func current_weapon():
-	null
-	
-
+func change_current_weapon():
+	if current_weapon == "wood_sword":
+		damage = 10
+		$weapon_cooldown.wait_time = 0.5
 
 func _on_sword_animation_finished(anim_name):
 	$"sword sprites".hide()
 
-
-
- 
-
-
-func _on_knockback_timer_timeout():
+func _on_player_hurt_timer_timeout():
 	player_hurt_active = false
 	moving = true
+	currently_under_knockback = false
 	print("timer_working")

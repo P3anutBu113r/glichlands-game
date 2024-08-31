@@ -13,6 +13,8 @@ var alert_animation = false
 var close_stop = false
 var damage_animation = false
 var damage_knockback = false
+var max_health = 100
+var damage_cooldown = false
 
 
 
@@ -24,11 +26,19 @@ func _physics_process(delta):
 	attack()
 	movement(delta)
 	take_damage()
+	health_prosessing()
 	if damage_animation:
 		$AnimatedSprite2D.play("slime_hurt")
 	elif alert_animation:
 		$AnimatedSprite2D.play("slime_aleart")
 		
+	
+func health_prosessing():
+	$healthbar.value = health
+	if health >= max_health:
+		$healthbar.hide()
+	if health < max_health:
+		$healthbar.show()
 	if health <= 0:
 		print("slime dead")
 		queue_free()
@@ -73,7 +83,7 @@ func _on_combat_hitbox_body_entered(body):
 	if body.has_method("player"):
 		combat = true
 		player_in_attack_zone = true
-		close_stop = true
+		
 
 func attack():
 	if combat and attack_cooldown:
@@ -83,7 +93,7 @@ func attack():
 		moving = false
 		player.player_hurt_active = false
 		attack_cooldown = false
-		print("slime stage 1")
+		
 
 func attack_stage_2():
 	alert_animation = false
@@ -93,13 +103,13 @@ func attack_stage_2():
 	if player_in_attack_zone:
 		player.health = player.health - 20
 		player.player_hurt_active = true
-		print("your health is ", player.health)
+	
 
 func _on_combat_hitbox_body_exited(body):
 	if body.has_method("player"):
 		combat = false
 		player_in_attack_zone = false
-		close_stop = false
+		
 
 
 func _on_attack_cooldown_timeout():
@@ -108,9 +118,10 @@ func _on_attack_cooldown_timeout():
 	
 
 func take_damage():
-	if player_in_attack_zone and Global.player_attacking == true:
+	if player_in_attack_zone and Global.player_attacking == true and damage_cooldown == false:
 		health = health - player.damage
-		Global.player_attacking = false
+		$take_damage_timer.start()
+		damage_cooldown = true
 		damage_animation = true
 		moving = false
 		$slime_hurt_timer.start()
@@ -138,3 +149,18 @@ func _on_slime_hurt_timer_timeout():
 	if warning == false:
 		moving = true
 	
+
+
+func _on_stop_range_body_entered(body):
+	if body.has_method("player"):
+		close_stop = true
+		
+
+
+func _on_stop_range_body_exited(body):
+	if body.has_method("player"):
+		close_stop = false
+
+
+func _on_take_damage_timer_timeout():
+	damage_cooldown = false

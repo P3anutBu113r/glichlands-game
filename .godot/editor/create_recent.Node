@@ -1,6 +1,7 @@
 Timer
 ProgressBar
 CollisionShape2D
+Camera2D
 Area2D
 Sprite2D
 AnimationPlayer
@@ -8,5 +9,4 @@ AnimatedSprite2D
 CharacterBody2D
 CollisionPolygon2D
 StaticBody2D
-Camera2D
 TileMap

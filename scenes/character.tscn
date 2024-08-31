@@ -1,11 +1,14 @@
-[gd_scene load_steps=33 format=3 uid="uid://byqwrxtmyt6ql"]
+[gd_scene load_steps=41 format=3 uid="uid://byqwrxtmyt6ql"]
 
 [ext_resource type="Texture2D" uid="uid://c4i8g6inr645q" path="res://art/Character spritesheets/the guy/the guy.png" id="1_hpyxm"]
 [ext_resource type="Script" path="res://scripts/character.gd" id="1_tsvs4"]
+[ext_resource type="Texture2D" uid="uid://lqyp3yuetoga" path="res://art/Character spritesheets/the guy/Behind_hurtt.png" id="2_dxawm"]
 [ext_resource type="Texture2D" uid="uid://de114upjslulx" path="res://art/Character spritesheets/the guy/Right-Sideways-guy1-sheet.png" id="3_7j5o5"]
 [ext_resource type="Texture2D" uid="uid://cwo8klrmqcb4n" path="res://art/Character spritesheets/the guy/the guy walking-sheet.png" id="3_gunpy"]
 [ext_resource type="Texture2D" uid="uid://btt12jfiyqha7" path="res://art/Character spritesheets/the guy/the guy up idle.png" id="3_pqy8k"]
+[ext_resource type="Texture2D" uid="uid://cfbl3h2t2n2lj" path="res://art/Character spritesheets/the guy/the guy_hurt_down.png" id="4_ghtb7"]
 [ext_resource type="Texture2D" uid="uid://vr0502el1pev" path="res://art/Character spritesheets/the guy/Left-Sideways-guy1-sheet-sheet.png" id="5_35v0i"]
+[ext_resource type="Texture2D" uid="uid://c4xdf2g5unbrw" path="res://art/Character spritesheets/the guy/side_hurt.png" id="7_514g0"]
 [ext_resource type="Texture2D" uid="uid://cy436emcu3h7g" path="res://art/Character spritesheets/the guy/the guy behind walking1-sheet-sheet.png" id="7_qk2ia"]
 [ext_resource type="Texture2D" uid="uid://d12o3rc4nnlpt" path="res://art/Weapons/wood sword 1.png" id="8_e344q"]
 
@@ -33,13 +36,17 @@ region = Rect2(32, 0, 16, 32)
 atlas = ExtResource("3_gunpy")
 region = Rect2(48, 0, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6lws4"]
-atlas = ExtResource("3_7j5o5")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_3kort"]
+atlas = ExtResource("4_ghtb7")
+region = Rect2(0, 0, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7ofco"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ldvnw"]
 atlas = ExtResource("3_7j5o5")
-region = Rect2(32, 0, 32, 32)
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fr2al"]
+atlas = ExtResource("3_7j5o5")
+region = Rect2(16, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wn3sh"]
 atlas = ExtResource("5_35v0i")
@@ -48,6 +55,10 @@ region = Rect2(0, 0, 16, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_p013p"]
 atlas = ExtResource("5_35v0i")
 region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nyojc"]
+atlas = ExtResource("7_514g0")
+region = Rect2(0, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tgvrc"]
 atlas = ExtResource("3_pqy8k")
@@ -72,6 +83,10 @@ region = Rect2(32, 0, 16, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_tk50r"]
 atlas = ExtResource("7_qk2ia")
 region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5udhw"]
+atlas = ExtResource("2_dxawm")
+region = Rect2(0, 0, 16, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ncipj"]
 animations = [{
@@ -105,10 +120,18 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6lws4")
+"texture": SubResource("AtlasTexture_3kort")
+}],
+"loop": true,
+"name": &"hurt_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ldvnw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7ofco")
+"texture": SubResource("AtlasTexture_fr2al")
 }],
 "loop": true,
 "name": &"side idle",
@@ -123,6 +146,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"side walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nyojc")
+}],
+"loop": true,
+"name": &"side_hurt",
 "speed": 5.0
 }, {
 "frames": [{
@@ -152,13 +183,36 @@ animations = [{
 "loop": true,
 "name": &"up walk",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5udhw")
+}],
+"loop": true,
+"name": &"up_hurt",
+"speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k6git"]
 radius = 3.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_led8w"]
-radius = 11.1803
+radius = 67.0298
+
+[sub_resource type="Animation" id="Animation_df25q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sword sprites:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.733249]
+}
 
 [sub_resource type="Animation" id="Animation_r4goc"]
 resource_name = "Sword up"
@@ -274,11 +328,15 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_21a2q"]
 _data = {
+"RESET": SubResource("Animation_df25q"),
 "Sword up": SubResource("Animation_r4goc"),
 "Wood sword down": SubResource("Animation_v8f5i"),
 "left sword": SubResource("Animation_w4k42"),
 "sword right": SubResource("Animation_7l6uo")
 }
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qrcl5"]
+size = Vector2(4.9985, 20)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 collision_layer = 3
@@ -289,8 +347,7 @@ y_sort_enabled = true
 position = Vector2(0, -5)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_ncipj")
-animation = &"side walk"
-frame_progress = 0.982261
+animation = &"up_hurt"
 
 [node name="dashTimer" type="Timer" parent="."]
 wait_time = 3.0
@@ -307,7 +364,7 @@ position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_led8w")
 
 [node name="sword sprites" type="Sprite2D" parent="."]
-position = Vector2(13, -14)
+position = Vector2(6, 2)
 rotation = 0.733249
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("8_e344q")
@@ -318,16 +375,30 @@ libraries = {
 "": SubResource("AnimationLibrary_21a2q")
 }
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sword sprites"]
+position = Vector2(1.90735e-06, -1.90735e-06)
+rotation = 0.813053
+shape = SubResource("RectangleShape2D_qrcl5")
+
 [node name="weapon_cooldown" type="Timer" parent="."]
 wait_time = 0.5
 
-[node name="knockback_timer" type="Timer" parent="."]
-wait_time = 0.1
+[node name="player_hurt_timer" type="Timer" parent="."]
+wait_time = 0.2
 one_shot = true
+
+[node name="healthbar" type="ProgressBar" parent="."]
+modulate = Color(1, 0, 0, 1)
+offset_left = -9.0
+offset_top = -19.0
+offset_right = 171.0
+offset_bottom = 18.0
+scale = Vector2(0.1, 0.1)
+show_percentage = false
 
 [connection signal="timeout" from="dashTimer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="combat_hitbox" to="." method="_on_combat_hitbox_body_entered"]
 [connection signal="body_exited" from="combat_hitbox" to="." method="_on_combat_hitbox_body_exited"]
 [connection signal="animation_finished" from="sword sprites/sword" to="." method="_on_sword_animation_finished"]
 [connection signal="timeout" from="weapon_cooldown" to="." method="_on_weapon_cooldown_timeout"]
-[connection signal="timeout" from="knockback_timer" to="." method="_on_knockback_timer_timeout"]
+[connection signal="timeout" from="player_hurt_timer" to="." method="_on_player_hurt_timer_timeout"]

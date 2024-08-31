@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bm0dw3edj6qxj"]
+[gd_scene load_steps=28 format=3 uid="uid://bm0dw3edj6qxj"]
 
 [ext_resource type="Script" path="res://scripts/slime.gd" id="1_6r1ku"]
 [ext_resource type="Texture2D" uid="uid://ckcpwop4xluv7" path="res://art/Character spritesheets/slime/slimeidle.png" id="1_aclco"]
@@ -148,10 +148,12 @@ radius = 4.0
 radius = 101.02
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kncrw"]
-radius = 18.0
+radius = 23.0217
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c1xrm"]
+radius = 7.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mhkwx"]
-radius = 23.0
 
 [node name="green slime" type="CharacterBody2D"]
 script = ExtResource("1_6r1ku")
@@ -187,14 +189,33 @@ wait_time = 0.1
 one_shot = true
 
 [node name="warning timer" type="Timer" parent="."]
-wait_time = 0.7
+wait_time = 0.6
 one_shot = true
+
+[node name="stop_range" type="Area2D" parent="."]
+position = Vector2(0, -4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stop_range"]
+shape = SubResource("CircleShape2D_c1xrm")
 
 [node name="hurt range" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hurt range"]
 position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_mhkwx")
+
+[node name="take_damage_timer" type="Timer" parent="."]
+wait_time = 0.4
+one_shot = true
+
+[node name="healthbar" type="ProgressBar" parent="."]
+modulate = Color(1, 0, 0, 1)
+offset_left = -10.0
+offset_top = 1.0
+offset_right = 30.0
+offset_bottom = 11.0
+scale = Vector2(0.5, 0.5)
+show_percentage = false
 
 [connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]
 [connection signal="body_entered" from="detection area" to="." method="_on_detection_area_body_entered"]
@@ -204,5 +225,8 @@ shape = SubResource("CircleShape2D_mhkwx")
 [connection signal="timeout" from="attack cooldown" to="." method="_on_attack_cooldown_timeout"]
 [connection signal="timeout" from="slime_hurt_timer" to="." method="_on_slime_hurt_timer_timeout"]
 [connection signal="timeout" from="warning timer" to="." method="_on_warning_timer_timeout"]
+[connection signal="body_entered" from="stop_range" to="." method="_on_stop_range_body_entered"]
+[connection signal="body_exited" from="stop_range" to="." method="_on_stop_range_body_exited"]
 [connection signal="body_entered" from="hurt range" to="." method="_on_hurt_range_body_entered"]
 [connection signal="body_exited" from="hurt range" to="." method="_on_hurt_range_body_exited"]
+[connection signal="timeout" from="take_damage_timer" to="." method="_on_take_damage_timer_timeout"]

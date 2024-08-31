@@ -1,45 +1,52 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1724996118
-export_presets.cfg::TextFile::-1::1724371199::0::1::::<><>::
-icon.svg::CompressedTexture2D::5392545246896395256::1721801380::1723170784::1::::<><>::
-README.md::TextFile::-1::1724371199::0::1::::<><>::
-::res://art/::1724825089
-::res://art/Character spritesheets/::1724720133
-::res://art/Character spritesheets/slime/::1724900371
-slime aleart.png::CompressedTexture2D::234985167866087553::1724892931::1724892931::1::::<><>::
-slimeidle.png::CompressedTexture2D::5479809361479837666::1724719339::1724587089::1::::<><>::
-slimejump.png::CompressedTexture2D::8068715712061260455::1724719339::1724719339::1::::<><>::
-slime_hurt.png::CompressedTexture2D::3816613031405687229::1724900314::1724900371::1::::<><>::
-::res://art/Character spritesheets/the guy/::1724984645
-Left-Sideways-guy1-sheet-sheet.png::CompressedTexture2D::1510632991844958361::1724984644::1724984645::1::::<><>::
-Right-Sideways-guy1-sheet.png::CompressedTexture2D::7495322751144654773::1724379051::1724587315::1::::<><>::
-the guy behind walking1-sheet-sheet.png::CompressedTexture2D::6518996233724986434::1724719663::1724719829::1::::<><>::
-the guy up idle.png::CompressedTexture2D::3760859229220578172::1724220085::1724587074::1::::<><>::
-the guy walking-sheet.png::CompressedTexture2D::6347919339265307579::1724642067::1724643315::1::::<><>::
-the guy.png::CompressedTexture2D::6826848871643263144::1723090442::1724587078::1::::<><>::
-::res://art/objects/::1724733842
-grassland bushes.png::CompressedTexture2D::3814772682178903483::1724550297::1724550297::1::::<><>::
-plains trees.png::CompressedTexture2D::3649853662573821741::1724550297::1724550297::1::::<><>::
-The rock sprite.png::CompressedTexture2D::8939853018052319195::1724733828::1724733842::1::::<><>::
-::res://art/tilemap/::1724900371
-Hills ladder.png::CompressedTexture2D::2444871238776952284::1724378184::1724378185::1::::<><>::
-hills.png::CompressedTexture2D::1260720140829544026::1724371199::1724371199::1::::<><>::
-path & grass.png::CompressedTexture2D::5479747777143124264::1724221303::1724221303::1::::<><>::
-slimeidle.png::CompressedTexture2D::2046364062935764620::1724588094::1724632717::1::::<><>::
-tileset 2.png::CompressedTexture2D::3053982576288483573::1724371199::1724371199::1::::<><>::
-::res://art/tilesets/::1724980529
-plains.tres::TileSet::2632526475725539471::1724980529::0::1::::<><>::uid://bsaas6nruknw4::::res://art/objects/plains trees.png<>uid://ckcov67odbexs::::res://art/tilemap/path & grass.png<>uid://bjrmv80mjymbt::::res://art/tilemap/tileset 2.png<>uid://d0mscqqjmlt0f::::res://art/objects/The rock sprite.png<>uid://r7x42i8f7kys::::res://art/tilemap/hills.png<>uid://bul50psdfedr4::::res://art/objects/grassland bushes.png<>uid://ba3kw37k08ad5::::res://art/tilemap/Hills ladder.png
-::res://art/Weapons/::1724825089
-wood sword 1.png::CompressedTexture2D::9040811122477911829::1724814885::1724825089::1::::<><>::
-::res://scenes/::1724985990
-character.tscn::PackedScene::4105350345374497663::1724985990::0::1::::<><>::uid://c4i8g6inr645q::::res://art/Character spritesheets/the guy/the guy.png<>res://scripts/character.gd<>uid://de114upjslulx::::res://art/Character spritesheets/the guy/Right-Sideways-guy1-sheet.png<>uid://cwo8klrmqcb4n::::res://art/Character spritesheets/the guy/the guy walking-sheet.png<>uid://btt12jfiyqha7::::res://art/Character spritesheets/the guy/the guy up idle.png<>uid://vr0502el1pev::::res://art/Character spritesheets/the guy/Left-Sideways-guy1-sheet-sheet.png<>uid://cy436emcu3h7g::::res://art/Character spritesheets/the guy/the guy behind walking1-sheet-sheet.png<>uid://d12o3rc4nnlpt::::res://art/Weapons/wood sword 1.png
-flower_ring.tscn::PackedScene::282066037275744810::1724985408::0::1::::<><>::res://scripts/flower_ring.gd<>uid://byqwrxtmyt6ql::::res://scenes/character.tscn<>uid://bdrhldmlhebet::::res://art/tilesets/plains.tres
-green_slime.tscn::PackedScene::3280519166627783871::1724985408::0::1::::<><>::res://scripts/slime.gd<>uid://ckcpwop4xluv7::::res://art/Character spritesheets/slime/slimeidle.png<>uid://dl3f3ebi5rx6::::res://art/Character spritesheets/slime/slime aleart.png<>uid://bum2cahplv0r6::::res://art/Character spritesheets/slime/slime_hurt.png<>uid://dm7stlw782uwd::::res://art/Character spritesheets/slime/slimejump.png
-junction.tscn::PackedScene::7748854593856326657::1724985408::0::1::::<><>::res://scripts/junction.gd<>uid://byqwrxtmyt6ql::::res://scenes/character.tscn<>uid://bdrhldmlhebet::::res://art/tilesets/plains.tres<>uid://bm0dw3edj6qxj::::res://scenes/green_slime.tscn
-::res://scripts/::1724910882
-character.gd::GDScript::-1::1724910687::0::1::::<>CharacterBody2D<>::
-flower_ring.gd::GDScript::-1::1724806410::0::1::::<>Node2D<>::
-global.gd::GDScript::-1::1724910730::0::1::::<>Node<>::
-junction.gd::GDScript::-1::1724892931::0::1::::<>Node2D<>::
-slime.gd::GDScript::-1::1724910882::0::1::::<>CharacterBody2D<>::
-the guy walking-sheet.png::CompressedTexture2D::8753395163142622793::1724643231::1724643232::1::::<><>::
+::res://::1725077252
+export_presets.cfg::TextFile::-1::1725065534::0::1::::<><>::
+icon.svg::CompressedTexture2D::5392545246896395256::1723192801::1725016719::1::::<><>::
+README.md::TextFile::-1::1724371007::0::1::::<><>::
+::res://art/::1725016689
+::res://art/Character spritesheets/::1725016689
+::res://art/Character spritesheets/slime/::1725016719
+slime aleart.png::CompressedTexture2D::234985167866087553::1724836243::1725016719::1::::<><>::
+slimeidle.png::CompressedTexture2D::5479809361479837666::1724669263::1725016719::1::::<><>::
+slimejump.png::CompressedTexture2D::8068715712061260455::1724668968::1725016719::1::::<><>::
+slime_hurt.png::CompressedTexture2D::3816613031405687229::1725016689::1725016719::1::::<><>::
+::res://art/Character spritesheets/the guy/::1725064830
+Behind_hurtt.png::CompressedTexture2D::806592827462208220::1725064825::1725064830::1::::<><>::
+Left-Sideways-guy1-sheet-sheet.png::CompressedTexture2D::1510632991844958361::1725063056::1725063062::1::::<><>::
+Right-Sideways-guy1-sheet.png::CompressedTexture2D::7495322751144654773::1725063030::1725063062::1::::<><>::
+side_hurt.png::CompressedTexture2D::6855991029969922500::1725064711::1725064830::1::::<><>::
+the guy behind walking1-sheet-sheet.png::CompressedTexture2D::6518996233724986434::1724746470::1725016719::1::::<><>::
+the guy up idle.png::CompressedTexture2D::3760859229220578172::1724665699::1725016719::1::::<><>::
+the guy walking-sheet.png::CompressedTexture2D::6347919339265307579::1724665699::1725016719::1::::<><>::
+the guy.png::CompressedTexture2D::6826848871643263144::1724665699::1725016719::1::::<><>::
+the guy_hurt_down.png::CompressedTexture2D::5126568262753258915::1725061843::1725061848::1::::<><>::
+::res://art/objects/::1725016719
+grassland bushes.png::CompressedTexture2D::3814772682178903483::1724330856::1725016719::1::::<><>::
+plains trees.png::CompressedTexture2D::3649853662573821741::1724404248::1725016719::1::::<><>::
+The rock sprite.png::CompressedTexture2D::8939853018052319195::1724746470::1725016719::1::::<><>::
+::res://art/tilemap/::1725016719
+Hills ladder.png::CompressedTexture2D::2444871238776952284::1724401052::1725016719::1::::<><>::
+hills.png::CompressedTexture2D::1260720140829544026::1724332572::1725016719::1::::<><>::
+path & grass.png::CompressedTexture2D::5479747777143124264::1724320024::1725016719::1::::<><>::
+slimeidle.png::CompressedTexture2D::2046364062935764620::1724665699::1725016719::1::::<><>::
+tileset 2.png::CompressedTexture2D::3053982576288483573::1724324164::1725016719::1::::<><>::
+::res://art/tilesets/::1725061995
+plains.tres::TileSet::2632526475725539471::1725061995::0::1::::<><>::uid://bsaas6nruknw4::::res://art/objects/plains trees.png<>uid://ckcov67odbexs::::res://art/tilemap/path & grass.png<>uid://bjrmv80mjymbt::::res://art/tilemap/tileset 2.png<>uid://d0mscqqjmlt0f::::res://art/objects/The rock sprite.png<>uid://r7x42i8f7kys::::res://art/tilemap/hills.png<>uid://bul50psdfedr4::::res://art/objects/grassland bushes.png<>uid://ba3kw37k08ad5::::res://art/tilemap/Hills ladder.png
+::res://art/Weapons/::1725016719
+wood sword 1.png::CompressedTexture2D::9040811122477911829::1724832692::1725016719::1::::<><>::
+::res://exports/::1725065559
+::res://exports/1.2/::1725065534
+::res://exports/Glichlands 1.1  combat update/::1725062462
+::res://scenes/::1725071488
+character.tscn::PackedScene::4105350345374497663::1725071488::0::1::::<><>::uid://c4i8g6inr645q::::res://art/Character spritesheets/the guy/the guy.png<>res://scripts/character.gd<>uid://lqyp3yuetoga::::res://art/Character spritesheets/the guy/Behind_hurtt.png<>uid://de114upjslulx::::res://art/Character spritesheets/the guy/Right-Sideways-guy1-sheet.png<>uid://cwo8klrmqcb4n::::res://art/Character spritesheets/the guy/the guy walking-sheet.png<>uid://btt12jfiyqha7::::res://art/Character spritesheets/the guy/the guy up idle.png<>uid://cfbl3h2t2n2lj::::res://art/Character spritesheets/the guy/the guy_hurt_down.png<>uid://vr0502el1pev::::res://art/Character spritesheets/the guy/Left-Sideways-guy1-sheet-sheet.png<>uid://c4xdf2g5unbrw::::res://art/Character spritesheets/the guy/side_hurt.png<>uid://cy436emcu3h7g::::res://art/Character spritesheets/the guy/the guy behind walking1-sheet-sheet.png<>uid://d12o3rc4nnlpt::::res://art/Weapons/wood sword 1.png
+flower_ring.tscn::PackedScene::282066037275744810::1725071488::0::1::::<><>::res://scripts/flower_ring.gd<>uid://byqwrxtmyt6ql::::res://scenes/character.tscn<>uid://bdrhldmlhebet::::res://art/tilesets/plains.tres
+green_slime.tscn::PackedScene::3280519166627783871::1725071488::0::1::::<><>::res://scripts/slime.gd<>uid://ckcpwop4xluv7::::res://art/Character spritesheets/slime/slimeidle.png<>uid://dl3f3ebi5rx6::::res://art/Character spritesheets/slime/slime aleart.png<>uid://bum2cahplv0r6::::res://art/Character spritesheets/slime/slime_hurt.png<>uid://dm7stlw782uwd::::res://art/Character spritesheets/slime/slimejump.png
+junction.tscn::PackedScene::7748854593856326657::1725071488::0::1::::<><>::res://scripts/junction.gd<>uid://byqwrxtmyt6ql::::res://scenes/character.tscn<>uid://bdrhldmlhebet::::res://art/tilesets/plains.tres<>uid://bm0dw3edj6qxj::::res://scenes/green_slime.tscn
+::res://scripts/::1725071488
+character.gd::GDScript::-1::1725071488::0::1::::<>CharacterBody2D<>::
+flower_ring.gd::GDScript::-1::1724758436::0::1::::<>Node2D<>::
+global.gd::GDScript::-1::1724800938::0::1::::<>Node<>::
+junction.gd::GDScript::-1::1724846715::0::1::::<>Node2D<>::
+old movement.gd::GDScript::-1::1725067968::0::1::::<>CharacterBody2D<>::
+slime.gd::GDScript::-1::1725066844::0::1::::<>CharacterBody2D<>::
+the guy walking-sheet.png::CompressedTexture2D::8753395163142622793::1724665699::1725016719::1::::<><>::
