@@ -1,91 +1,91 @@
 [gd_scene load_steps=41 format=3 uid="uid://byqwrxtmyt6ql"]
 
-[ext_resource type="Texture2D" uid="uid://c4i8g6inr645q" path="res://art/Character spritesheets/the guy/the guy.png" id="1_hpyxm"]
-[ext_resource type="Script" path="res://scripts/character.gd" id="1_tsvs4"]
-[ext_resource type="Texture2D" uid="uid://lqyp3yuetoga" path="res://art/Character spritesheets/the guy/Behind_hurtt.png" id="2_dxawm"]
-[ext_resource type="Texture2D" uid="uid://de114upjslulx" path="res://art/Character spritesheets/the guy/Right-Sideways-guy1-sheet.png" id="3_7j5o5"]
-[ext_resource type="Texture2D" uid="uid://cwo8klrmqcb4n" path="res://art/Character spritesheets/the guy/the guy walking-sheet.png" id="3_gunpy"]
-[ext_resource type="Texture2D" uid="uid://btt12jfiyqha7" path="res://art/Character spritesheets/the guy/the guy up idle.png" id="3_pqy8k"]
-[ext_resource type="Texture2D" uid="uid://cfbl3h2t2n2lj" path="res://art/Character spritesheets/the guy/the guy_hurt_down.png" id="4_ghtb7"]
-[ext_resource type="Texture2D" uid="uid://vr0502el1pev" path="res://art/Character spritesheets/the guy/Left-Sideways-guy1-sheet-sheet.png" id="5_35v0i"]
-[ext_resource type="Texture2D" uid="uid://c4xdf2g5unbrw" path="res://art/Character spritesheets/the guy/side_hurt.png" id="7_514g0"]
-[ext_resource type="Texture2D" uid="uid://cy436emcu3h7g" path="res://art/Character spritesheets/the guy/the guy behind walking1-sheet-sheet.png" id="7_qk2ia"]
-[ext_resource type="Texture2D" uid="uid://d12o3rc4nnlpt" path="res://art/Weapons/wood sword 1.png" id="8_e344q"]
+[ext_resource type="Script" path="res://scripts/character.gd" id="1_qkru6"]
+[ext_resource type="Texture2D" uid="uid://c4i8g6inr645q" path="res://art/Character spritesheets/the guy/the guy.png" id="2_x0j30"]
+[ext_resource type="Texture2D" uid="uid://cwo8klrmqcb4n" path="res://art/Character spritesheets/the guy/the guy walking-sheet.png" id="3_f3b57"]
+[ext_resource type="Texture2D" uid="uid://cfbl3h2t2n2lj" path="res://art/Character spritesheets/the guy/the guy_hurt_down.png" id="4_insye"]
+[ext_resource type="Texture2D" uid="uid://de114upjslulx" path="res://art/Character spritesheets/the guy/Right-Sideways-guy1-sheet.png" id="5_1yo43"]
+[ext_resource type="Texture2D" uid="uid://vr0502el1pev" path="res://art/Character spritesheets/the guy/Left-Sideways-guy1-sheet-sheet.png" id="6_kpbx2"]
+[ext_resource type="Texture2D" uid="uid://c4xdf2g5unbrw" path="res://art/Character spritesheets/the guy/side_hurt.png" id="7_7hp2t"]
+[ext_resource type="Texture2D" uid="uid://btt12jfiyqha7" path="res://art/Character spritesheets/the guy/the guy up idle.png" id="8_6t5c8"]
+[ext_resource type="Texture2D" uid="uid://cy436emcu3h7g" path="res://art/Character spritesheets/the guy/the guy behind walking1-sheet-sheet.png" id="9_afq34"]
+[ext_resource type="Texture2D" uid="uid://lqyp3yuetoga" path="res://art/Character spritesheets/the guy/Behind_hurtt.png" id="10_1vxo0"]
+[ext_resource type="Texture2D" uid="uid://d12o3rc4nnlpt" path="res://art/Weapons/wood sword 1.png" id="11_ec3om"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vbbgd"]
-atlas = ExtResource("1_hpyxm")
+atlas = ExtResource("2_x0j30")
 region = Rect2(0, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nyxsg"]
-atlas = ExtResource("1_hpyxm")
+atlas = ExtResource("2_x0j30")
 region = Rect2(16, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x8ulv"]
-atlas = ExtResource("3_gunpy")
+atlas = ExtResource("3_f3b57")
 region = Rect2(0, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_woams"]
-atlas = ExtResource("3_gunpy")
+atlas = ExtResource("3_f3b57")
 region = Rect2(16, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6x68y"]
-atlas = ExtResource("3_gunpy")
+atlas = ExtResource("3_f3b57")
 region = Rect2(32, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rh1ul"]
-atlas = ExtResource("3_gunpy")
+atlas = ExtResource("3_f3b57")
 region = Rect2(48, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3kort"]
-atlas = ExtResource("4_ghtb7")
+atlas = ExtResource("4_insye")
 region = Rect2(0, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ldvnw"]
-atlas = ExtResource("3_7j5o5")
+atlas = ExtResource("5_1yo43")
 region = Rect2(0, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fr2al"]
-atlas = ExtResource("3_7j5o5")
+atlas = ExtResource("5_1yo43")
 region = Rect2(16, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wn3sh"]
-atlas = ExtResource("5_35v0i")
+atlas = ExtResource("6_kpbx2")
 region = Rect2(0, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p013p"]
-atlas = ExtResource("5_35v0i")
+atlas = ExtResource("6_kpbx2")
 region = Rect2(16, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nyojc"]
-atlas = ExtResource("7_514g0")
+atlas = ExtResource("7_7hp2t")
 region = Rect2(0, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tgvrc"]
-atlas = ExtResource("3_pqy8k")
+atlas = ExtResource("8_6t5c8")
 region = Rect2(0, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xdji0"]
-atlas = ExtResource("3_pqy8k")
+atlas = ExtResource("8_6t5c8")
 region = Rect2(16, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ni7uo"]
-atlas = ExtResource("7_qk2ia")
+atlas = ExtResource("9_afq34")
 region = Rect2(0, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aufx5"]
-atlas = ExtResource("7_qk2ia")
+atlas = ExtResource("9_afq34")
 region = Rect2(16, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dxuep"]
-atlas = ExtResource("7_qk2ia")
+atlas = ExtResource("9_afq34")
 region = Rect2(32, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tk50r"]
-atlas = ExtResource("7_qk2ia")
+atlas = ExtResource("9_afq34")
 region = Rect2(48, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5udhw"]
-atlas = ExtResource("2_dxawm")
+atlas = ExtResource("10_1vxo0")
 region = Rect2(0, 0, 16, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ncipj"]
@@ -340,7 +340,7 @@ size = Vector2(4.9985, 20)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 collision_layer = 3
-script = ExtResource("1_tsvs4")
+script = ExtResource("1_qkru6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
@@ -367,7 +367,7 @@ shape = SubResource("CircleShape2D_led8w")
 position = Vector2(6, 2)
 rotation = 0.733249
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("8_e344q")
+texture = ExtResource("11_ec3om")
 
 [node name="sword" type="AnimationPlayer" parent="sword sprites"]
 root_node = NodePath("../..")

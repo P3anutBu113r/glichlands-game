@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Player
 #the initiation of the variables
 var enemy_inattack_range = false
 var enemy_type = "none"
@@ -14,15 +15,19 @@ var current_weapon = "wood_sword"
 #approach the undeleatable gap
 
 const SPEED = 100 
-const acceleration = 5
+const acceleration = 5.0
 var input: Vector2
 var current_dirrection = "down"
 var dashcooldown = true
 
 func _ready():
+	NavigationManager.on_trigger_player_spawn.connect(on_spawn)
 	$AnimatedSprite2D.play("down idle")
 	health = Global.player_max_health
 	$"sword sprites".hide()
+func on_spawn(position: Vector2, direction: String):
+	global_position = position
+	current_dirrection = direction
 
 #ALL HAIL THE PHYSICS PROCESS
 func _physics_process(delta):
@@ -36,14 +41,16 @@ func _physics_process(delta):
 func get_input():
 	input.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	input.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
-	return input.normalized()
+	input = input.normalized()
 func player_movement(delta):
 	var player_input = get_input()
+	
+
+
 	if player_input == Vector2.ZERO:
 		velocity = Vector2.ZERO
 	else:
 		velocity = input * SPEED
-	
 	move_and_slide()
 func health_processing():
 	$healthbar.value = health
@@ -57,17 +64,17 @@ func health_processing():
 		queue_free()
 	
 func get_current_direction():
-	if Input.is_action_pressed("ui_left"):
-		current_dirrection = "left"
-		playanimation(1)
-	elif Input.is_action_pressed("ui_right"):
-		current_dirrection = "right"
-		playanimation(1)
-	elif Input.is_action_pressed("ui_up"):
+	if Input.is_action_pressed("ui_up"):
 		current_dirrection = "up"
 		playanimation(1)
 	elif Input.is_action_pressed("ui_down"):
 		current_dirrection = "down"
+		playanimation(1)
+	elif Input.is_action_pressed("ui_left"):
+		current_dirrection = "left"
+		playanimation(1)
+	elif Input.is_action_pressed("ui_right"):
+		current_dirrection = "right"
 		playanimation(1)
 	else:
 		playanimation(0)
