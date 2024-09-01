@@ -1,21 +1,2 @@
-res://scenes/flower_ring.tscn
 res://art/tilesets/plains.tres
-res://scenes/junction.tscn
-res://scenes/character.tscn
-res://scenes/green_slime.tscn
-res://scripts/character.gd
-res://scenes/scene_change_door.gd
-res://scenes/scene change door.tscn
-res://scripts/junction.gd
-res://scripts/Navigation_manager.gd
-res://scripts/scene_change_door.gd
-res://scripts/basic_level.gd
-res://scenes/levels/flower_ring.tscn
-res://scenes/levels/junction.tscn
-res://scenes/levels/plains/flower_ring.tscn
-res://scenes/levels/plains/junction.tscn
-res://scenes/characters/character.tscn
-res://scenes/characters/green_slime.tscn
-res://scenes/levels/scene change door.tscn
-res://scenes/levels/door.tscn
-res://scripts/door.gd
+res://Main menue.tscn

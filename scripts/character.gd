@@ -53,11 +53,7 @@ func player_movement(delta):
 		velocity = input * SPEED
 	move_and_slide()
 func health_processing():
-	$healthbar.value = health
-	if health >= Global.player_max_health:
-		$healthbar.hide()
-	else:
-		$healthbar.show()
+	Global.player_health = health
 	if health <= 0:
 		print ("game over")
 		health = 0

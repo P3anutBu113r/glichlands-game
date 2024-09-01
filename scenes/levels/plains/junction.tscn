@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dinurdrpd0w14"]
+[gd_scene load_steps=7 format=3 uid="uid://dinurdrpd0w14"]
 
 [ext_resource type="Script" path="res://scripts/basic_level.gd" id="1_c02oa"]
 [ext_resource type="PackedScene" uid="uid://byqwrxtmyt6ql" path="res://scenes/characters/character.tscn" id="2_fduia"]
+[ext_resource type="PackedScene" uid="uid://clu2ntpp0y0gc" path="res://scenes/misc/ui.tscn" id="3_0h24n"]
 [ext_resource type="TileSet" uid="uid://bdrhldmlhebet" path="res://art/tilesets/plains.tres" id="3_ea6b4"]
-[ext_resource type="PackedScene" uid="uid://cdi5nck1cpbg5" path="res://scenes/levels/door.tscn" id="4_0kyo5"]
+[ext_resource type="PackedScene" uid="uid://cdi5nck1cpbg5" path="res://scenes/misc/door.tscn" id="4_0kyo5"]
 [ext_resource type="PackedScene" uid="uid://bm0dw3edj6qxj" path="res://scenes/characters/green_slime.tscn" id="5_6gdkv"]
 
 [node name="junction" type="Node2D"]
@@ -22,8 +23,6 @@ limit_left = -354
 limit_top = -250
 limit_right = 445
 limit_bottom = 179
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
 
 [node name="TileMap" type="TileMap" parent="."]
 z_as_relative = false
@@ -48,7 +47,7 @@ scale = Vector2(50, 50)
 polygon = PackedVector2Array(-15.9213, -2.22547, -15.0813, -2.24547, -15.1413, -3.14547, -14.1613, -3.10547, -14.1213, -2.26547, -7.38126, -2.28547, -7.42126, -3.28547, -6.48126, -3.24547, -6.44126, -2.24547, 0.078743, -2.28547, 0.0987434, 6.27453, -6.46126, 6.27453, -6.44126, 7.03453, -7.26126, 7.05453, -7.28126, 6.31453, -7.50126, 6.31453, -16.1213, 6.25453, -16.0813, -4.54547, -19.4213, 10.5945, 10.3587, 7.83453, -1.08126, -8.46547, -15.6013, -4.44547, -16.0613, -2.32547)
 
 [node name="Doors" type="Node2D" parent="."]
-position = Vector2(51, 146)
+position = Vector2(49, 147)
 
 [node name="Door_S" parent="Doors" instance=ExtResource("4_0kyo5")]
 position = Vector2(-1, 5)
@@ -72,6 +71,8 @@ metadata/range = 0
 position = Vector2(191, 131)
 
 [node name="green slime4" parent="." instance=ExtResource("5_6gdkv")]
-position = Vector2(-136, -27)
+position = Vector2(-175, 2)
+
+[node name="Node2D" parent="." instance=ExtResource("3_0h24n")]
 
 [editable path="Doors/Door_S"]

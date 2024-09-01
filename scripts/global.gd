@@ -10,6 +10,7 @@ var player_attacking = false
 var player_attack_dirrection = "none"
 var flower_ring_exit_x = 108
 var flower_ring_exit_y = 193
+var player_health = player_max_health
 
 func finish_changescenes():
 	if transition_scene == true:
