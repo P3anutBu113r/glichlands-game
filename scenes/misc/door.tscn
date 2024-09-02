@@ -1,14 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://cdi5nck1cpbg5"]
 
-[ext_resource type="Script" path="res://scripts/door.gd" id="1_ohjdv"]
+[ext_resource type="Script" path="res://scripts/misc/door.gd" id="1_ohjdv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_chodh"]
-size = Vector2(44.5, 37)
+size = Vector2(42.5, 53)
 
 [node name="SceneChangeDoor" type="Area2D"]
 script = ExtResource("1_ohjdv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.75, -0.5)
 shape = SubResource("RectangleShape2D_chodh")
 
 [node name="Spawn" type="Marker2D" parent="."]

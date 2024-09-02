@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="random game"
-run/main_scene="res://scenes/levels/plains/junction.tscn"
+run/main_scene="res://scenes/misc/Main menue.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*res://scripts/global.gd"
-NavigationManager="*res://scripts/Navigation_manager.gd"
+Global="*res://scripts/global/global.gd"
+NavigationManager="*res://scripts/global/Navigation_manager.gd"
 
 [display]
 

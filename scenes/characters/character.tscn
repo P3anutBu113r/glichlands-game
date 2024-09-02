@@ -1,6 +1,6 @@
 [gd_scene load_steps=41 format=3 uid="uid://byqwrxtmyt6ql"]
 
-[ext_resource type="Script" path="res://scripts/character.gd" id="1_qkru6"]
+[ext_resource type="Script" path="res://scripts/characters/character.gd" id="1_qkru6"]
 [ext_resource type="Texture2D" uid="uid://c4i8g6inr645q" path="res://art/Character spritesheets/the guy/the guy.png" id="2_x0j30"]
 [ext_resource type="Texture2D" uid="uid://cwo8klrmqcb4n" path="res://art/Character spritesheets/the guy/the guy walking-sheet.png" id="3_f3b57"]
 [ext_resource type="Texture2D" uid="uid://cfbl3h2t2n2lj" path="res://art/Character spritesheets/the guy/the guy_hurt_down.png" id="4_insye"]

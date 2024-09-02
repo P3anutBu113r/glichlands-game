@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=4 uid="uid://eavt6516pchm"]
 
-[ext_resource type="Script" path="res://scripts/basic_level.gd" id="1_qxtu4"]
+[ext_resource type="Script" path="res://scripts/levels/basic_level.gd" id="1_qxtu4"]
 [ext_resource type="TileSet" uid="uid://bdrhldmlhebet" path="res://art/tilesets/plains.tres" id="2_uvqnl"]
 [ext_resource type="PackedScene" uid="uid://byqwrxtmyt6ql" path="res://scenes/characters/character.tscn" id="3_ou6nw"]
 [ext_resource type="PackedScene" uid="uid://cdi5nck1cpbg5" path="res://scenes/misc/door.tscn" id="4_n4pul"]
@@ -59,9 +59,9 @@ destination_door_tag = "S"
 spawn_direction = "down"
 
 [node name="CollisionShape2D" parent="Doors/Door_N" index="0"]
-position = Vector2(520.5, -176)
+position = Vector2(520.5, -186.5)
 
 [node name="Spawn" parent="Doors/Door_N" index="1"]
-position = Vector2(521, -145)
+position = Vector2(521, -137)
 
 [editable path="Doors/Door_N"]

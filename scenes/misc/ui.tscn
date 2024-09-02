@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://clu2ntpp0y0gc"]
 
-[ext_resource type="Script" path="res://ui.gd" id="1_ynmnb"]
+[ext_resource type="Script" path="res://scripts/misc/ui.gd" id="1_ynmnb"]
 [ext_resource type="Texture2D" uid="uid://cn8407anpnhhb" path="res://art/Character spritesheets/the guy/healthbar1.png" id="2_cyepv"]
 [ext_resource type="Texture2D" uid="uid://b3bof134wcqyd" path="res://art/Character spritesheets/the guy/healthbar2.png" id="3_3kbhg"]
 
