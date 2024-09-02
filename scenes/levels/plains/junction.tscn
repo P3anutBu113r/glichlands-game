@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dinurdrpd0w14"]
+[gd_scene load_steps=9 format=3 uid="uid://dinurdrpd0w14"]
 
 [ext_resource type="Script" path="res://scripts/levels/basic_level.gd" id="1_c02oa"]
 [ext_resource type="PackedScene" uid="uid://byqwrxtmyt6ql" path="res://scenes/characters/character.tscn" id="2_fduia"]
@@ -6,6 +6,12 @@
 [ext_resource type="TileSet" uid="uid://bdrhldmlhebet" path="res://art/tilesets/plains.tres" id="3_ea6b4"]
 [ext_resource type="PackedScene" uid="uid://cdi5nck1cpbg5" path="res://scenes/misc/door.tscn" id="4_0kyo5"]
 [ext_resource type="PackedScene" uid="uid://bm0dw3edj6qxj" path="res://scenes/characters/green_slime.tscn" id="5_6gdkv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tpuvi"]
+size = Vector2(57, 53)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7xycq"]
+size = Vector2(52, 53)
 
 [node name="junction" type="Node2D"]
 z_index = 1
@@ -55,20 +61,32 @@ destination_level_tag = "flower_ring"
 destination_door_tag = "N"
 
 [node name="CollisionShape2D" parent="Doors/Door_S" index="0"]
-position = Vector2(60, 81)
+position = Vector2(63.5, 71)
+shape = SubResource("RectangleShape2D_tpuvi")
 
 [node name="Spawn" parent="Doors/Door_S" index="1"]
 position = Vector2(59, 20)
 
+[node name="Door_N" parent="Doors" instance=ExtResource("4_0kyo5")]
+destination_level_tag = "combat_tutorial"
+destination_door_tag = "S"
+
+[node name="CollisionShape2D" parent="Doors/Door_N" index="0"]
+position = Vector2(-329, -409)
+shape = SubResource("RectangleShape2D_7xycq")
+
+[node name="Spawn" parent="Doors/Door_N" index="1"]
+position = Vector2(-328, -367)
+
 [node name="green slime" parent="." instance=ExtResource("5_6gdkv")]
-position = Vector2(299, 97)
+position = Vector2(127, 162)
 
 [node name="green slime2" parent="." instance=ExtResource("5_6gdkv")]
-position = Vector2(308, 59)
+position = Vector2(109, 162)
 metadata/range = 0
 
 [node name="green slime3" parent="." instance=ExtResource("5_6gdkv")]
-position = Vector2(276, 93)
+position = Vector2(84, 163)
 
 [node name="green slime4" parent="." instance=ExtResource("5_6gdkv")]
 position = Vector2(-175, 2)
@@ -76,3 +94,4 @@ position = Vector2(-175, 2)
 [node name="Node2D" parent="." instance=ExtResource("3_0h24n")]
 
 [editable path="Doors/Door_S"]
+[editable path="Doors/Door_N"]

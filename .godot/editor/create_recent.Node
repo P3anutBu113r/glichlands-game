@@ -1,14 +1,14 @@
-Node
+Node2D
+RichTextLabel
 Marker2D
 Camera2D
 TileMapLayer
 TileMap
+Node
 Button
-Node2D
 TextureProgressBar
 CanvasLayer
 ProgressBar
 CollisionShape2D
 Area2D
 Timer
-Sprite2D

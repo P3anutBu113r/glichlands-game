@@ -1,11 +1,16 @@
-[gd_scene load_steps=4 format=4 uid="uid://qrdvj7lpfpfo"]
+[gd_scene load_steps=6 format=4 uid="uid://qrdvj7lpfpfo"]
 
+[ext_resource type="Script" path="res://scripts/levels/basic_level.gd" id="1_dx65r"]
 [ext_resource type="PackedScene" uid="uid://cdi5nck1cpbg5" path="res://scenes/misc/door.tscn" id="1_htofa"]
 [ext_resource type="TileSet" uid="uid://bdrhldmlhebet" path="res://art/tilesets/plains.tres" id="1_rno7l"]
 [ext_resource type="PackedScene" uid="uid://byqwrxtmyt6ql" path="res://scenes/characters/character.tscn" id="2_y0xfb"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dxm8m"]
+size = Vector2(39, 79)
+
 [node name="start ring" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_dx65r")
 
 [node name="tiles" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -39,14 +44,17 @@ limit_bottom = 360
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(466, 360)
 
-[node name="doors" type="Node" parent="."]
+[node name="Doors" type="Node" parent="."]
 
-[node name="SceneChangeDoor" parent="doors" instance=ExtResource("1_htofa")]
+[node name="Door_E" parent="Doors" instance=ExtResource("1_htofa")]
+destination_level_tag = "combat_tutorial"
+destination_door_tag = "W"
 
-[node name="CollisionShape2D" parent="doors/SceneChangeDoor" index="0"]
-position = Vector2(689, 247)
+[node name="CollisionShape2D" parent="Doors/Door_E" index="0"]
+position = Vector2(691.5, 247.5)
+shape = SubResource("RectangleShape2D_dxm8m")
 
-[node name="Spawn" parent="doors/SceneChangeDoor" index="1"]
+[node name="Spawn" parent="Doors/Door_E" index="1"]
 position = Vector2(654, 247)
 
-[editable path="doors/SceneChangeDoor"]
+[editable path="Doors/Door_E"]

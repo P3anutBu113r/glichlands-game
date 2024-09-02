@@ -12,6 +12,10 @@ func go_to_level(level_tag, destination_tag):
 			scene_to_load = "res://scenes/levels/plains/flower_ring.tscn"
 		"junction":
 			scene_to_load = "res://scenes/levels/plains/junction.tscn"
+		"start_ring":
+			scene_to_load = "res://scenes/levels/plains/start_ring.tscn"
+		"combat_tutorial":
+			scene_to_load = "res://scenes/levels/plains/combat_tutorial.tscn"
 			
 	if scene_to_load != null:
 		spawn_door_tag = destination_tag

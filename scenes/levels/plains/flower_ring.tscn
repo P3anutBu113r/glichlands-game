@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=4 uid="uid://eavt6516pchm"]
+[gd_scene load_steps=6 format=4 uid="uid://eavt6516pchm"]
 
 [ext_resource type="Script" path="res://scripts/levels/basic_level.gd" id="1_qxtu4"]
 [ext_resource type="TileSet" uid="uid://bdrhldmlhebet" path="res://art/tilesets/plains.tres" id="2_uvqnl"]
 [ext_resource type="PackedScene" uid="uid://byqwrxtmyt6ql" path="res://scenes/characters/character.tscn" id="3_ou6nw"]
 [ext_resource type="PackedScene" uid="uid://cdi5nck1cpbg5" path="res://scenes/misc/door.tscn" id="4_n4pul"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4oblt"]
+size = Vector2(48, 53)
 
 [node name="Flower_ring" type="Node2D"]
 z_index = 1
@@ -59,7 +62,8 @@ destination_door_tag = "S"
 spawn_direction = "down"
 
 [node name="CollisionShape2D" parent="Doors/Door_N" index="0"]
-position = Vector2(520.5, -186.5)
+position = Vector2(520, -186.5)
+shape = SubResource("RectangleShape2D_4oblt")
 
 [node name="Spawn" parent="Doors/Door_N" index="1"]
 position = Vector2(521, -137)
