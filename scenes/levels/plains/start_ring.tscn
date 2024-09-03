@@ -32,7 +32,7 @@ tile_set = ExtResource("1_rno7l")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_y0xfb")]
 y_sort_enabled = true
-position = Vector2(380, 60)
+position = Vector2(391, 67)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(4, 4)

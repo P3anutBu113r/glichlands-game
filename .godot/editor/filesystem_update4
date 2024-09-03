@@ -1,6 +1,5 @@
-res://combat_tutorial.tscn
-res://art/tilesets/plains.tres
 res://scenes/levels/plains/junction.tscn
+res://art/tilesets/plains.tres
 res://scenes/levels/plains/flower_ring.tscn
 res://scenes/characters/character.tscn
 res://scenes/characters/green_slime.tscn
@@ -8,6 +7,8 @@ res://scenes/misc/door.tscn
 res://scenes/misc/ui.tscn
 res://scenes/misc/Main menue.tscn
 res://scenes/levels/plains/start_ring.tscn
-res://scripts/global/Navigation_manager.gd
 res://scenes/levels/plains/combat_tutorial.tscn
 res://scripts/misc/main_menue.gd
+res://scripts/global/global.gd
+res://scripts/characters/slime.gd
+res://scripts/characters/character.gd

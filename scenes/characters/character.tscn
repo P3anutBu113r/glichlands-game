@@ -336,7 +336,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qrcl5"]
-size = Vector2(4.9985, 20)
+size = Vector2(5.24342, 18.6831)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 collision_layer = 3
@@ -350,8 +350,8 @@ sprite_frames = SubResource("SpriteFrames_ncipj")
 animation = &"down idle"
 
 [node name="dashTimer" type="Timer" parent="."]
-wait_time = 3.0
-autostart = true
+wait_time = 0.2
+one_shot = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2.08165e-12, 2)
@@ -364,7 +364,7 @@ position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_led8w")
 
 [node name="sword sprites" type="Sprite2D" parent="."]
-position = Vector2(6, 2)
+position = Vector2(8, -21)
 rotation = 0.733249
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("11_ec3om")
@@ -376,7 +376,7 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sword sprites"]
-position = Vector2(1.90735e-06, -1.90735e-06)
+position = Vector2(0.515782, -0.31943)
 rotation = 0.813053
 shape = SubResource("RectangleShape2D_qrcl5")
 
@@ -387,7 +387,7 @@ wait_time = 0.5
 wait_time = 0.2
 one_shot = true
 
-[connection signal="timeout" from="dashTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="dashTimer" to="." method="_on_dash_timer_timeout"]
 [connection signal="body_entered" from="combat_hitbox" to="." method="_on_combat_hitbox_body_entered"]
 [connection signal="body_exited" from="combat_hitbox" to="." method="_on_combat_hitbox_body_exited"]
 [connection signal="animation_finished" from="sword sprites/sword" to="." method="_on_sword_animation_finished"]

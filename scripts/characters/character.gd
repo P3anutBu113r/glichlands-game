@@ -14,11 +14,12 @@ var currently_under_knockback = false
 var current_weapon = "wood_sword"
 #approach the undeleatable gap
 
-const SPEED = 100 
+var speed = 100 
 const acceleration = 5.0
 var input: Vector2
 var current_dirrection = "down"
 var dashcooldown = true
+var stamina = 100
 
 func _ready():
 	NavigationManager.on_trigger_player_spawn.connect(on_spawn)
@@ -38,6 +39,7 @@ func _physics_process(delta):
 	player_knockback(delta)
 	change_current_weapon()
 	health_processing()
+	dodge()
 func get_input():
 	input.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	input.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
@@ -50,7 +52,7 @@ func player_movement(delta):
 	if player_input == Vector2.ZERO:
 		velocity = Vector2.ZERO
 	else:
-		velocity = input * SPEED
+		velocity = input * speed
 	move_and_slide()
 func health_processing():
 	Global.player_health = health
@@ -58,7 +60,13 @@ func health_processing():
 		print ("game over")
 		health = 0
 		queue_free()
+func dodge():
 	
+	if Input.is_action_just_pressed("space"):
+		dashcooldown = true
+		if dashcooldown:
+			speed = 200
+			$dashTimer.start()
 func get_current_direction():
 	if Input.is_action_pressed("ui_up"):
 		current_dirrection = "up"
@@ -197,3 +205,10 @@ func _on_player_hurt_timer_timeout():
 	moving = true
 	currently_under_knockback = false
 	print("timer_working")
+
+
+func _on_dash_timer_timeout():
+	dashcooldown = false
+	speed = 100
+	print("hi")
+	

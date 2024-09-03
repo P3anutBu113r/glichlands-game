@@ -15,12 +15,14 @@ var damage_animation = false
 var damage_knockback = false
 var max_health = 100
 var damage_cooldown = false
+var damage = 20
 
 
 
 @onready var anim = $AnimatedSprite2D
 func _ready():
 	$AnimatedSprite2D.play("slime_idle")
+	difficulty_mods()
 func _physics_process(delta):
 	
 	attack()
@@ -32,6 +34,37 @@ func _physics_process(delta):
 	elif alert_animation:
 		$AnimatedSprite2D.play("slime_aleart")
 		
+func difficulty_mods():
+	if Global.difficulty == "easy":
+		speed = 80
+		health = 40
+		max_health = 40
+		damage = 10
+		$"warning timer".wait_time = 1
+		$"attack cooldown".wait_time = 1
+		$healthbar.max_value = 60
+	elif Global.difficulty == "normal":
+		health = 60
+		max_health = 60
+		damage = 15
+		$"warning timer".wait_time = 0.8
+		$"attack cooldown".wait_time = 1.5
+		$healthbar.max_value = 80
+	elif Global.difficulty == "hard":
+		speed = 120
+		health = 100
+		damage = 20
+		$"warning timer".wait_time = 0.6
+		$"attack cooldown".wait_time = 1
+		$healthbar.max_value = 100
+	elif Global.difficulty == "jack":
+		health = 200
+		max_health = 200
+		damage = 50
+		speed = 150
+		$"warning timer".wait_time = 0.2
+		$"attack cooldown".wait_time = 0.6
+		$healthbar.max_value = 200
 	
 func health_prosessing():
 	$healthbar.value = health
@@ -101,7 +134,7 @@ func attack_stage_2():
 	warning = false
 	moving = true
 	if player_in_attack_zone:
-		player.health = player.health - 20
+		player.health = player.health - damage
 		player.player_hurt_active = true
 	
 

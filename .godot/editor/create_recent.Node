@@ -1,11 +1,11 @@
-Node2D
 RichTextLabel
+Button
+Node2D
 Marker2D
 Camera2D
 TileMapLayer
 TileMap
 Node
-Button
 TextureProgressBar
 CanvasLayer
 ProgressBar

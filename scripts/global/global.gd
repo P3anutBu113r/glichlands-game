@@ -1,5 +1,5 @@
 extends Node
-
+var difficulty = "easy"
 var current_scene = "junction"
 var transition_scene = false
 func _physics_process(delta):
