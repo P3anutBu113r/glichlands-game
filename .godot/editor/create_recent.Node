@@ -1,9 +1,10 @@
+TileMapLayer
+Camera2D
+Node2D
+Timer
 RichTextLabel
 Button
-Node2D
 Marker2D
-Camera2D
-TileMapLayer
 TileMap
 Node
 TextureProgressBar
@@ -11,4 +12,3 @@ CanvasLayer
 ProgressBar
 CollisionShape2D
 Area2D
-Timer

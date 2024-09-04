@@ -1,12 +1,13 @@
-[gd_scene load_steps=6 format=4 uid="uid://qrdvj7lpfpfo"]
+[gd_scene load_steps=7 format=4 uid="uid://qrdvj7lpfpfo"]
 
 [ext_resource type="Script" path="res://scripts/levels/basic_level.gd" id="1_dx65r"]
 [ext_resource type="PackedScene" uid="uid://cdi5nck1cpbg5" path="res://scenes/misc/door.tscn" id="1_htofa"]
 [ext_resource type="TileSet" uid="uid://bdrhldmlhebet" path="res://art/tilesets/plains.tres" id="1_rno7l"]
 [ext_resource type="PackedScene" uid="uid://byqwrxtmyt6ql" path="res://scenes/characters/character.tscn" id="2_y0xfb"]
+[ext_resource type="PackedScene" uid="uid://clu2ntpp0y0gc" path="res://scenes/misc/ui.tscn" id="5_2blle"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dxm8m"]
-size = Vector2(39, 79)
+size = Vector2(39, 111)
 
 [node name="start ring" type="Node2D"]
 y_sort_enabled = true
@@ -51,10 +52,12 @@ destination_level_tag = "combat_tutorial"
 destination_door_tag = "W"
 
 [node name="CollisionShape2D" parent="Doors/Door_E" index="0"]
-position = Vector2(691.5, 247.5)
+position = Vector2(691.5, 241.5)
 shape = SubResource("RectangleShape2D_dxm8m")
 
 [node name="Spawn" parent="Doors/Door_E" index="1"]
 position = Vector2(654, 247)
+
+[node name="Node2D" parent="." instance=ExtResource("5_2blle")]
 
 [editable path="Doors/Door_E"]

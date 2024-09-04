@@ -387,9 +387,13 @@ wait_time = 0.5
 wait_time = 0.2
 one_shot = true
 
+[node name="stamina_regen_timer" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="timeout" from="dashTimer" to="." method="_on_dash_timer_timeout"]
 [connection signal="body_entered" from="combat_hitbox" to="." method="_on_combat_hitbox_body_entered"]
 [connection signal="body_exited" from="combat_hitbox" to="." method="_on_combat_hitbox_body_exited"]
 [connection signal="animation_finished" from="sword sprites/sword" to="." method="_on_sword_animation_finished"]
 [connection signal="timeout" from="weapon_cooldown" to="." method="_on_weapon_cooldown_timeout"]
 [connection signal="timeout" from="player_hurt_timer" to="." method="_on_player_hurt_timer_timeout"]
+[connection signal="timeout" from="stamina_regen_timer" to="." method="_on_stamina_regen_timer_timeout"]

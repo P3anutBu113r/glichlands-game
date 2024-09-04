@@ -134,7 +134,7 @@ func attack_stage_2():
 	warning = false
 	moving = true
 	if player_in_attack_zone:
-		player.health = player.health - damage
+		Global.player_health = Global.player_health - damage
 		player.player_hurt_active = true
 	
 

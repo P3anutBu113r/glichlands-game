@@ -10,3 +10,4 @@ func _ready():
 func _process(delta):
 	
 	$healthbar.value = Global.player_health
+	$stambar.value = Global.player_stamina

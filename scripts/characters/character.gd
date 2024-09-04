@@ -3,7 +3,6 @@ class_name Player
 #the initiation of the variables
 var enemy_inattack_range = false
 var enemy_type = "none"
-var health = 100
 var damage = 20
 var attack_cooldown = true
 var attack_animation = true
@@ -12,6 +11,7 @@ var moving = true
 var enemy = "body"
 var currently_under_knockback = false
 var current_weapon = "wood_sword"
+var stamina_regen_cooldown = true
 #approach the undeleatable gap
 
 var speed = 100 
@@ -19,12 +19,10 @@ const acceleration = 5.0
 var input: Vector2
 var current_dirrection = "down"
 var dashcooldown = true
-var stamina = 100
 
 func _ready():
 	NavigationManager.on_trigger_player_spawn.connect(on_spawn)
 	$AnimatedSprite2D.play("down idle")
-	health = Global.player_max_health
 	$"sword sprites".hide()
 func on_spawn(position: Vector2, direction: String):
 	global_position = position
@@ -40,6 +38,8 @@ func _physics_process(delta):
 	change_current_weapon()
 	health_processing()
 	dodge()
+	stamina_regen()
+
 func get_input():
 	input.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	input.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
@@ -55,18 +55,17 @@ func player_movement(delta):
 		velocity = input * speed
 	move_and_slide()
 func health_processing():
-	Global.player_health = health
-	if health <= 0:
+	if Global.player_health <= 0:
 		print ("game over")
-		health = 0
+		Global.player_health = 0
 		queue_free()
 func dodge():
-	
 	if Input.is_action_just_pressed("space"):
 		dashcooldown = true
-		if dashcooldown:
+		if dashcooldown and Global.player_stamina > 25:
 			speed = 200
 			$dashTimer.start()
+			Global.player_stamina = Global.player_stamina - 25
 func get_current_direction():
 	if Input.is_action_pressed("ui_up"):
 		current_dirrection = "up"
@@ -85,7 +84,11 @@ func get_current_direction():
 	
 	
 #fun
-
+func stamina_regen():
+	if Global.player_stamina < 100 and stamina_regen_cooldown:
+		stamina_regen_cooldown = false
+		$stamina_regen_timer.start()
+		
 func player():
 	pass
 #dashing
@@ -164,9 +167,10 @@ func _on_combat_hitbox_body_exited(body):
 		
 func attack():
 	if Input.is_action_just_pressed("attack"):
-		if attack_cooldown == true:
+		if attack_cooldown == true and Global.player_stamina > 15:
 			Global.player_attacking = true
 			attack_cooldown = false
+			Global.player_stamina = Global.player_stamina - 15
 			
 			
 			
@@ -210,5 +214,9 @@ func _on_player_hurt_timer_timeout():
 func _on_dash_timer_timeout():
 	dashcooldown = false
 	speed = 100
-	print("hi")
-	
+
+
+func _on_stamina_regen_timer_timeout():
+	stamina_regen_cooldown = true
+	Global.player_stamina = Global.player_stamina + 10
+	print(Global.player_stamina)
