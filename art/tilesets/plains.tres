@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bul50psdfedr4" path="res://art/objects/grassland bushes.png" id="5_2mu6e"]
 [ext_resource type="Texture2D" uid="uid://ba3kw37k08ad5" path="res://art/tilemap/Hills ladder.png" id="6_cklej"]
 [ext_resource type="Texture2D" uid="uid://drmhk0e4erj7n" path="res://art/tilemap/water_transistions.png" id="7_umubw"]
-[ext_resource type="Texture2D" uid="uid://c6fu1wm478ujn" path="res://art/tilemap/plank.png" id="8_gm8d5"]
+[ext_resource type="Texture2D" uid="uid://ev8rqd62w4qi" path="res://art/tilemap/planks.png" id="9_yuqbn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d54rc"]
 texture = ExtResource("1_viktp")
@@ -168,16 +168,6 @@ texture = ExtResource("7_umubw")
 4:8/0 = 0
 5:8/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_spk7s"]
-texture = ExtResource("8_gm8d5")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-5:0/0 = 0
-6:0/0 = 0
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h6yg1"]
 texture = ExtResource("6_cklej")
 0:0/0 = 0
@@ -231,6 +221,25 @@ texture = ExtResource("6_cklej")
 5:4/0 = 0
 5:5/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pkchk"]
+texture = ExtResource("9_yuqbn")
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+
 [resource]
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_w6ksq")
@@ -241,4 +250,4 @@ sources/8 = SubResource("TileSetAtlasSource_h6yg1")
 sources/0 = SubResource("TileSetAtlasSource_d54rc")
 sources/3 = SubResource("TileSetAtlasSource_qox53")
 sources/6 = SubResource("TileSetAtlasSource_sys66")
-sources/7 = SubResource("TileSetAtlasSource_spk7s")
+sources/9 = SubResource("TileSetAtlasSource_pkchk")
