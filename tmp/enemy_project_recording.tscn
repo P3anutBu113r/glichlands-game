@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0wn43v7aadl2"]
+
+[ext_resource type="PackedScene" uid="uid://byqwrxtmyt6ql" path="res://scenes/characters/character.tscn" id="1_lahbo"]
+[ext_resource type="PackedScene" uid="uid://bm0dw3edj6qxj" path="res://scenes/characters/green_slime.tscn" id="2_4pmrf"]
+
+[node name="enemy_project_recording" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_lahbo")]
+position = Vector2(27, 104)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(2, 0)
+zoom = Vector2(3, 3)
+
+[node name="green slime" parent="." instance=ExtResource("2_4pmrf")]
+position = Vector2(165, 110)

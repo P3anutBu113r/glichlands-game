@@ -37,6 +37,7 @@ tile_map_data = PackedByteArray("AAADAAgAAAAAAAAAAAAMAAUAAAAAAAAAAAAKAAgAAAACAAA
 tile_set = ExtResource("2_uvqnl")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_ou6nw")]
+visible = false
 position = Vector2(112, 16)
 
 [node name="flower_ring_camera2" type="Camera2D" parent="CharacterBody2D"]
@@ -49,8 +50,10 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
 [node name="collisions" type="StaticBody2D" parent="."]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collisions"]
+visible = false
 polygon = PackedVector2Array(-2, 4, 17, 0, 89, 0, 88, -37, 136, -37, 135, 0, 174, -1, 127, -96, 17, 0)
 
 [node name="Doors" type="Node" parent="."]

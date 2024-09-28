@@ -88,6 +88,8 @@ func stamina_regen():
 	if Global.player_stamina < 100 and stamina_regen_cooldown:
 		stamina_regen_cooldown = false
 		$stamina_regen_timer.start()
+	if Global.player_stamina > 100:
+		Global.player_stamina = 100
 		
 func player():
 	pass

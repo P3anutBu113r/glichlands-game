@@ -336,7 +336,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qrcl5"]
-size = Vector2(5.24342, 18.6831)
+size = Vector2(5.24342, 19.9634)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 collision_layer = 3
@@ -364,7 +364,7 @@ position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_led8w")
 
 [node name="sword sprites" type="Sprite2D" parent="."]
-position = Vector2(8, -21)
+position = Vector2(13, -14)
 rotation = 0.733249
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("11_ec3om")
@@ -376,7 +376,7 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sword sprites"]
-position = Vector2(0.515782, -0.31943)
+position = Vector2(0.0507989, 0.120521)
 rotation = 0.813053
 shape = SubResource("RectangleShape2D_qrcl5")
 
@@ -389,6 +389,14 @@ one_shot = true
 
 [node name="stamina_regen_timer" type="Timer" parent="."]
 one_shot = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = -10.0
+offset_top = -27.0
+offset_right = 30.0
+offset_bottom = -4.0
+scale = Vector2(0.5, 0.5)
+text = "jerry"
 
 [connection signal="timeout" from="dashTimer" to="." method="_on_dash_timer_timeout"]
 [connection signal="body_entered" from="combat_hitbox" to="." method="_on_combat_hitbox_body_entered"]

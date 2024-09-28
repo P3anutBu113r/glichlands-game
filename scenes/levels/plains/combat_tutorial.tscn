@@ -79,6 +79,8 @@ limit_left = 0
 limit_top = 0
 limit_right = 850
 limit_bottom = 594
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
 offset_left = 166.0
@@ -92,7 +94,7 @@ the slime"
 [node name="Node2D" parent="." instance=ExtResource("5_5nsa6")]
 
 [node name="green slime" parent="." instance=ExtResource("1_p8b6j")]
-position = Vector2(309, 295)
+position = Vector2(295, 296)
 
 [node name="green slime2" parent="." instance=ExtResource("1_p8b6j")]
 position = Vector2(737, 452)

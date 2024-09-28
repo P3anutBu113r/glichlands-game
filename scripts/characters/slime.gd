@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed = 110
+@export var speed = 100
 var player_chase = false
 var player = null
 var combat = false
@@ -16,6 +16,10 @@ var damage_knockback = false
 var max_health = 100
 var damage_cooldown = false
 var damage = 20
+var player_damageable = false
+var currently_dashing = false
+var dash_direction: Vector2
+var dying = false
 
 
 
@@ -29,6 +33,7 @@ func _physics_process(delta):
 	movement(delta)
 	take_damage()
 	health_prosessing()
+	attack_stage_3()
 	if damage_animation:
 		$AnimatedSprite2D.play("slime_hurt")
 	elif alert_animation:
@@ -74,22 +79,32 @@ func health_prosessing():
 		$healthbar.show()
 	if health <= 0:
 		print("slime dead")
+		moving = false
+		
+		anim.play("slime_ded")
+		dying = true
 		queue_free()
 
 func movement(delta):
-	if player_chase and moving and close_stop == false:
-		position += (player.position - position).normalized() * speed * delta
-		move_and_collide(Vector2(0,0)) 
-		anim.play("slime_jump")
-		if(player.position.x - position.x) < 0:
-			anim.flip_h = true
+	if dying == false:
+		if currently_dashing == false:
+			if player_chase and moving and close_stop == false:
+				position += (player.position - position).normalized() * speed * delta
+				move_and_collide(Vector2(0,0)) 
+				anim.play("slime_jump")
+				if(player.position.x - position.x) < 0:
+					anim.flip_h = true
+				else:
+					anim.flip_h = false
+			elif damage_animation:
+				position -= (player.position - position).normalized() * speed * delta
+				move_and_collide(Vector2(0,0)) 
+			else:
+				anim.play("slime_idle")
 		else:
-			anim.flip_h = false
-	elif damage_animation:
-		position -= (player.position - position).normalized() * speed * delta
-		move_and_collide(Vector2(0,0)) 
-	else:
-		anim.play("slime_idle")
+			position += dash_direction * speed * delta
+			anim.play("slime_dash")
+			move_and_collide(Vector2(0,0)) 
 #chaotic slime thats fast as f**k
 	#if player_chase:
 		#position += (player.position - position)/speed
@@ -119,7 +134,7 @@ func _on_combat_hitbox_body_entered(body):
 		
 
 func attack():
-	if combat and attack_cooldown:
+	if combat and attack_cooldown and currently_dashing == false:
 		$"warning timer".start() 
 		alert_animation = true
 		warning = true
@@ -130,13 +145,20 @@ func attack():
 
 func attack_stage_2():
 	alert_animation = false
+	speed = speed + 100
+	currently_dashing = true
+	dash_direction = (player.position - position).normalized()
+	$dash_timer.start()
 	$"attack cooldown".start()
+	
 	warning = false
 	moving = true
-	if player_in_attack_zone:
+	
+func attack_stage_3():
+	if player_damageable and currently_dashing:
 		Global.player_health = Global.player_health - damage
 		player.player_hurt_active = true
-	
+		currently_dashing = false
 
 func _on_combat_hitbox_body_exited(body):
 	if body.has_method("player"):
@@ -197,3 +219,19 @@ func _on_stop_range_body_exited(body):
 
 func _on_take_damage_timer_timeout():
 	damage_cooldown = false
+
+
+func _on_dash_timer_timeout():
+	speed = speed - 100
+	currently_dashing = false
+	
+
+
+func _on_player_daminging_hitbox_body_entered(body):
+	if body.has_method("player"):
+		player_damageable = true
+
+
+func _on_player_daminging_hitbox_body_exited(body):
+		if body.has_method("player"):
+			player_damageable = false

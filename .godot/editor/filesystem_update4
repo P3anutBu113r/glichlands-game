@@ -9,3 +9,5 @@ res://scenes/misc/Main menue.tscn
 res://scenes/levels/plains/start_ring.tscn
 res://scenes/levels/plains/combat_tutorial.tscn
 res://scenes/levels/plains/lonley_lake.tscn
+res://tmp/enemy_project_recording.tscn
+res://scripts/characters/slime.gd
