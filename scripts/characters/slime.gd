@@ -20,6 +20,7 @@ var player_damageable = false
 var currently_dashing = false
 var dash_direction: Vector2
 var dying = false
+var death_timer_active = false
 
 
 
@@ -34,11 +35,12 @@ func _physics_process(delta):
 	take_damage()
 	health_prosessing()
 	attack_stage_3()
-	if damage_animation:
-		$AnimatedSprite2D.play("slime_hurt")
-	elif alert_animation:
-		$AnimatedSprite2D.play("slime_aleart")
-		
+	if dying == false:
+		if damage_animation:
+			$AnimatedSprite2D.play("slime_hurt")
+		elif alert_animation:
+			$AnimatedSprite2D.play("slime_aleart")
+			
 func difficulty_mods():
 	if Global.difficulty == "easy":
 		speed = 80
@@ -56,7 +58,6 @@ func difficulty_mods():
 		$"attack cooldown".wait_time = 1.5
 		$healthbar.max_value = 80
 	elif Global.difficulty == "hard":
-		speed = 120
 		health = 100
 		damage = 20
 		$"warning timer".wait_time = 0.6
@@ -66,7 +67,7 @@ func difficulty_mods():
 		health = 200
 		max_health = 200
 		damage = 50
-		speed = 150
+		speed = 130
 		$"warning timer".wait_time = 0.2
 		$"attack cooldown".wait_time = 0.6
 		$healthbar.max_value = 200
@@ -78,12 +79,19 @@ func health_prosessing():
 	if health < max_health:
 		$healthbar.show()
 	if health <= 0:
-		print("slime dead")
-		moving = false
-		
-		anim.play("slime_ded")
+		$healthbar.hide()
 		dying = true
-		queue_free()
+		
+		$AnimatedSprite2D.play("slime_ded")
+		
+		
+		
+		if death_timer_active == false: 
+			print("slime dead")
+			
+			$death_animation_timer.start()
+			death_timer_active = true
+		
 
 func movement(delta):
 	if dying == false:
@@ -130,7 +138,7 @@ func _on_detection_area_body_exited(body):
 func _on_combat_hitbox_body_entered(body):
 	if body.has_method("player"):
 		combat = true
-		player_in_attack_zone = true
+	
 		
 
 func attack():
@@ -139,7 +147,6 @@ func attack():
 		alert_animation = true
 		warning = true
 		moving = false
-		player.player_hurt_active = false
 		attack_cooldown = false
 		
 
@@ -163,7 +170,7 @@ func attack_stage_3():
 func _on_combat_hitbox_body_exited(body):
 	if body.has_method("player"):
 		combat = false
-		player_in_attack_zone = false
+	
 		
 
 
@@ -235,3 +242,7 @@ func _on_player_daminging_hitbox_body_entered(body):
 func _on_player_daminging_hitbox_body_exited(body):
 		if body.has_method("player"):
 			player_damageable = false
+
+
+func _on_death_animation_timer_timeout() -> void:
+	queue_free()

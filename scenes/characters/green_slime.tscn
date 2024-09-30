@@ -209,19 +209,23 @@ radius = 6.0
 radius = 132.034
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kncrw"]
-radius = 32.0156
+radius = 62.0081
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c1xrm"]
 radius = 8.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mhkwx"]
-radius = 6.0
+radius = 12.0416
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0saqx"]
 radius = 9.0
 
 [node name="green slime" type="CharacterBody2D"]
 script = ExtResource("1_6r1ku")
+
+[node name="death_animation_timer" type="Timer" parent="."]
+wait_time = 0.545
+one_shot = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -14)
@@ -294,6 +298,7 @@ offset_bottom = 11.0
 scale = Vector2(0.5, 0.5)
 show_percentage = false
 
+[connection signal="timeout" from="death_animation_timer" to="." method="_on_death_animation_timer_timeout"]
 [connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]
 [connection signal="body_entered" from="detection area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detection area" to="." method="_on_detection_area_body_exited"]

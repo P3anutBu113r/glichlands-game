@@ -1,10 +1,12 @@
-res://art/tilesets/plains.tres::aea24d77c5471cbf0a16296249c38005::1725318520::res://.godot/exported/133200997/export-19bcb63a42b8959406eccc9e0948aba7-plains.res
-res://scenes/characters/character.tscn::bdb1c5e493fab8ff89589ec76730228b::1725364910::res://.godot/exported/133200997/export-384f2c9e2c55fed7bdf15e591b3aa5c5-character.scn
-res://scenes/characters/green_slime.tscn::be3139a8ad8ae7ecc3a504d973209883::1725364910::res://.godot/exported/133200997/export-a37585db47ce4148ed70f6292702b7e4-green_slime.scn
-res://scenes/levels/plains/combat_tutorial.tscn::16f18a652e3cedfe5191a2015e960ee0::1725320927::res://.godot/exported/133200997/export-e767e711a9d63dc22d6ce2fd5c0fb470-combat_tutorial.scn
-res://scenes/levels/plains/flower_ring.tscn::b022652855286873fefb95b31ed280d9::1725320546::res://.godot/exported/133200997/export-12384a8459b8339bdc616e48a2e7fb9e-flower_ring.scn
-res://scenes/levels/plains/junction.tscn::f8e30c676c2036a75cdcaf94e7481be0::1725320546::res://.godot/exported/133200997/export-b6a207840575f13aa26c7376112a8c9a-junction.scn
-res://scenes/levels/plains/start_ring.tscn::6f12ffa189a740441d56ea8937fde998::1725364910::res://.godot/exported/133200997/export-c98626e2bba4cfd07dc7356ee41b20a6-start_ring.scn
-res://scenes/misc/door.tscn::332d9c4b64753d0f05de5710c6de45d8::1725320546::res://.godot/exported/133200997/export-3c0377d257e0643d38289264bfed9fda-door.scn
-res://scenes/misc/Main menue.tscn::d8364688862d08c1dd8271eec1329696::1725364910::res://.godot/exported/133200997/export-447a985e40dbe20317cb193f72171df1-Main menue.scn
-res://scenes/misc/ui.tscn::c11d4a32a787d3acf193d7770686ca6b::1725320547::res://.godot/exported/133200997/export-4b2739d3cddd3a4a573906b142ed923d-ui.scn
+res://art/tilesets/plains.tres::83ebb5936497bc548d1219328eb680ba::1727496473::res://.godot/exported/133200997/export-19bcb63a42b8959406eccc9e0948aba7-plains.res
+res://scenes/characters/character.tscn::98aa98249d76c8fbac6ad65495df7def::1727498563::res://.godot/exported/133200997/export-384f2c9e2c55fed7bdf15e591b3aa5c5-character.scn
+res://scenes/characters/green_slime.tscn::f317dc11694db27309bf3ccb947c05bb::1727498563::res://.godot/exported/133200997/export-a37585db47ce4148ed70f6292702b7e4-green_slime.scn
+res://scenes/levels/plains/combat_tutorial.tscn::302063fed4d46a8ac7cc682b6729c69d::1727498563::res://.godot/exported/133200997/export-e767e711a9d63dc22d6ce2fd5c0fb470-combat_tutorial.scn
+res://scenes/levels/plains/flower_ring.tscn::72fef73069679c85825c8dc878230328::1727498563::res://.godot/exported/133200997/export-12384a8459b8339bdc616e48a2e7fb9e-flower_ring.scn
+res://scenes/levels/plains/junction.tscn::f8e30c676c2036a75cdcaf94e7481be0::1727498563::res://.godot/exported/133200997/export-b6a207840575f13aa26c7376112a8c9a-junction.scn
+res://scenes/levels/plains/start_ring.tscn::d3f7b2309eb06a54a6985f48db215477::1727496137::res://.godot/exported/133200997/export-c98626e2bba4cfd07dc7356ee41b20a6-start_ring.scn
+res://scenes/misc/door.tscn::3ab6feb07cfb36d63a762a7f972b446f::1727496137::res://.godot/exported/133200997/export-3c0377d257e0643d38289264bfed9fda-door.scn
+res://scenes/misc/Main menue.tscn::a8a3063708c86287036f0e209ad3b43d::1727498563::res://.godot/exported/133200997/export-447a985e40dbe20317cb193f72171df1-Main menue.scn
+res://scenes/misc/ui.tscn::8330dee7ed759ef455b0c1fcd5b05832::1727496137::res://.godot/exported/133200997/export-4b2739d3cddd3a4a573906b142ed923d-ui.scn
+res://scenes/levels/plains/lonley_lake.tscn::c761978e4dd2ff03ba3c4b2441476373::1727496137::res://.godot/exported/133200997/export-30dbffc15a23311d4415840d8ad0e092-lonley_lake.scn
+res://tmp/enemy_project_recording.tscn::d04211ff422ed1e7242c4e7345520271::1727496137::res://.godot/exported/133200997/export-7c84088a4562c290be422c8fa94e6c86-enemy_project_recording.scn

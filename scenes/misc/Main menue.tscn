@@ -60,7 +60,7 @@ offset_left = 496.0
 offset_top = 301.0
 offset_right = 571.0
 offset_bottom = 341.0
-text = "Demo 1.5"
+text = "Demo 1.9"
 
 [connection signal="pressed" from="start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="dificuly_select/ez" to="." method="_on_ez_pressed"]

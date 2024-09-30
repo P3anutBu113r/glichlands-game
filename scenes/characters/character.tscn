@@ -391,6 +391,7 @@ one_shot = true
 one_shot = true
 
 [node name="Label" type="Label" parent="."]
+visible = false
 offset_left = -10.0
 offset_top = -27.0
 offset_right = 30.0

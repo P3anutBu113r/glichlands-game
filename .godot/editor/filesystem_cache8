@@ -1,84 +1,84 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1727326963
-export_presets.cfg::TextFile::-1::1725492630::0::1::::<><>::
-icon.svg::CompressedTexture2D::5392545246896395256::1721801380::1725492647::1::::<><>::
-README.md::TextFile::-1::1724371199::0::1::::<><>::
-::res://art/::1724825089
-::res://art/Character spritesheets/::1724720133
-::res://art/Character spritesheets/slime/::1727330950
-slime aleart.png::CompressedTexture2D::234985167866087553::1724892931::1725492647::1::::<><>::
-slimeidle.png::CompressedTexture2D::5479809361479837666::1724719339::1725492647::1::::<><>::
-slimejump.png::CompressedTexture2D::8068715712061260455::1724719339::1725492647::1::::<><>::
-slime_dash.png::CompressedTexture2D::8580243752294812084::1727329417::1727329417::1::::<><>::
-slime_ded.png::CompressedTexture2D::4921586670922449947::1727330950::1727330950::1::::<><>::
-slime_hurt.png::CompressedTexture2D::3816613031405687229::1724900314::1725492647::1::::<><>::
-water&beach.png::CompressedTexture2D::692428767595353675::1725268034::1725492647::1::::<><>::
-::res://art/Character spritesheets/the guy/::1725492647
-Behind_hurtt.png::CompressedTexture2D::806592827462208220::1725078132::1725492647::1::::<><>::
-healthbar1.png::CompressedTexture2D::5755227919560875011::1725231360::1725492647::1::::<><>::
-healthbar2.png::CompressedTexture2D::4354633060389074563::1725231360::1725492647::1::::<><>::
-Left-Sideways-guy1-sheet-sheet.png::CompressedTexture2D::1510632991844958361::1725078132::1725492647::1::::<><>::
-Right-Sideways-guy1-sheet.png::CompressedTexture2D::7495322751144654773::1725078132::1725492647::1::::<><>::
-side_hurt.png::CompressedTexture2D::6855991029969922500::1725231360::1725492647::1::::<><>::
-stambar1.png::CompressedTexture2D::8608846633976015716::1725492630::1725492647::1::::<><>::
-stambar2.png::CompressedTexture2D::5911009432966829728::1725492630::1725492647::1::::<><>::
-the guy behind walking1-sheet-sheet.png::CompressedTexture2D::6518996233724986434::1724719663::1725492647::1::::<><>::
-the guy up idle.png::CompressedTexture2D::3760859229220578172::1724220085::1725492647::1::::<><>::
-the guy walking-sheet.png::CompressedTexture2D::6347919339265307579::1724642067::1725492647::1::::<><>::
-the guy.png::CompressedTexture2D::6826848871643263144::1723090442::1725492647::1::::<><>::
-the guy_hurt_down.png::CompressedTexture2D::5126568262753258915::1725231360::1725492647::1::::<><>::
-::res://art/objects/::1725492647
-grassland bushes.png::CompressedTexture2D::3814772682178903483::1724550297::1725492647::1::::<><>::
-plains trees.png::CompressedTexture2D::3649853662573821741::1724550297::1725492647::1::::<><>::
-The rock sprite.png::CompressedTexture2D::8939853018052319195::1725324048::1725492647::1::::<><>::
-::res://art/tilemap/::1726033848
-Hills ladder.png::CompressedTexture2D::2444871238776952284::1724378184::1725492647::1::::<><>::
-hills.png::CompressedTexture2D::1260720140829544026::1724371199::1725492647::1::::<><>::
-path & grass.png::CompressedTexture2D::5479747777143124264::1724221303::1725492647::1::::<><>::
-plank.png::CompressedTexture2D::6960279354845428151::1725527963::1725527964::1::::<><>::
-planks.png::CompressedTexture2D::326142173098554908::1725529242::1725529243::1::::<><>::
-slimeidle.png::CompressedTexture2D::2046364062935764620::1724588094::1725492647::1::::<><>::
-tileset 2.png::CompressedTexture2D::3053982576288483573::1725330464::1725492647::1::::<><>::
-water_transistions.png::CompressedTexture2D::8377689123449608793::1725270193::1725492647::1::::<><>::
-::res://art/tilesets/::1727326966
-plains.tres::TileSet::2632526475725539471::1727326966::0::1::::<><>::uid://bsaas6nruknw4::::res://art/objects/plains trees.png<>uid://ckcov67odbexs::::res://art/tilemap/path & grass.png<>uid://bjrmv80mjymbt::::res://art/tilemap/tileset 2.png<>uid://d0mscqqjmlt0f::::res://art/objects/The rock sprite.png<>uid://r7x42i8f7kys::::res://art/tilemap/hills.png<>uid://bul50psdfedr4::::res://art/objects/grassland bushes.png<>uid://ba3kw37k08ad5::::res://art/tilemap/Hills ladder.png<>uid://drmhk0e4erj7n::::res://art/tilemap/water_transistions.png<>uid://ev8rqd62w4qi::::res://art/tilemap/planks.png
-::res://art/Weapons/::1725492647
-wood sword 1.png::CompressedTexture2D::9040811122477911829::1724814885::1725492647::1::::<><>::
-::res://exports/::1725492631
-::res://exports/1.2/::1725078132
-::res://exports/1.5/::1725492631
-::res://exports/Glichlands 1.1  combat update/::1725078133
-::res://scenes/::1725270184
-::res://scenes/characters/::1727329686
-character.tscn::PackedScene::4105350345374497663::1727329686::0::1::::<><>::res://scripts/characters/character.gd<>uid://c4i8g6inr645q::::res://art/Character spritesheets/the guy/the guy.png<>uid://cwo8klrmqcb4n::::res://art/Character spritesheets/the guy/the guy walking-sheet.png<>uid://cfbl3h2t2n2lj::::res://art/Character spritesheets/the guy/the guy_hurt_down.png<>uid://de114upjslulx::::res://art/Character spritesheets/the guy/Right-Sideways-guy1-sheet.png<>uid://vr0502el1pev::::res://art/Character spritesheets/the guy/Left-Sideways-guy1-sheet-sheet.png<>uid://c4xdf2g5unbrw::::res://art/Character spritesheets/the guy/side_hurt.png<>uid://btt12jfiyqha7::::res://art/Character spritesheets/the guy/the guy up idle.png<>uid://cy436emcu3h7g::::res://art/Character spritesheets/the guy/the guy behind walking1-sheet-sheet.png<>uid://lqyp3yuetoga::::res://art/Character spritesheets/the guy/Behind_hurtt.png<>uid://d12o3rc4nnlpt::::res://art/Weapons/wood sword 1.png
-green_slime.tscn::PackedScene::3280519166627783871::1727329686::0::1::::<><>::res://scripts/characters/slime.gd<>uid://ckcpwop4xluv7::::res://art/Character spritesheets/slime/slimeidle.png<>uid://dl3f3ebi5rx6::::res://art/Character spritesheets/slime/slime aleart.png<>uid://duilmjlf8u13e::::res://art/Character spritesheets/slime/slime_dash.png<>uid://bum2cahplv0r6::::res://art/Character spritesheets/slime/slime_hurt.png<>uid://dm7stlw782uwd::::res://art/Character spritesheets/slime/slimejump.png
-::res://scenes/levels/::1725231360
-::res://scenes/levels/plains/::1727329686
-combat_tutorial.tscn::PackedScene::3261508628709041222::1727329686::0::1::::<><>::res://scripts/levels/basic_level.gd<>uid://bm0dw3edj6qxj::::res://scenes/characters/green_slime.tscn<>uid://cdi5nck1cpbg5::::res://scenes/misc/door.tscn<>uid://bdrhldmlhebet::::res://art/tilesets/plains.tres<>uid://byqwrxtmyt6ql::::res://scenes/characters/character.tscn<>uid://clu2ntpp0y0gc::::res://scenes/misc/ui.tscn
-flower_ring.tscn::PackedScene::282066037275744810::1727329686::0::1::::<><>::res://scripts/levels/basic_level.gd<>uid://bdrhldmlhebet::::res://art/tilesets/plains.tres<>uid://byqwrxtmyt6ql::::res://scenes/characters/character.tscn<>uid://cdi5nck1cpbg5::::res://scenes/misc/door.tscn
-junction.tscn::PackedScene::7748854593856326657::1727329686::0::1::::<><>::res://scripts/levels/basic_level.gd<>uid://byqwrxtmyt6ql::::res://scenes/characters/character.tscn<>uid://clu2ntpp0y0gc::::res://scenes/misc/ui.tscn<>uid://bdrhldmlhebet::::res://art/tilesets/plains.tres<>uid://cdi5nck1cpbg5::::res://scenes/misc/door.tscn<>uid://bm0dw3edj6qxj::::res://scenes/characters/green_slime.tscn
-lonley_lake.tscn::PackedScene::4114401206575631290::1727327032::0::1::::<><>::uid://bdrhldmlhebet::::res://art/tilesets/plains.tres<>uid://byqwrxtmyt6ql::::res://scenes/characters/character.tscn
-start_ring.tscn::PackedScene::1158336095341777900::1727327032::0::1::::<><>::res://scripts/levels/basic_level.gd<>uid://cdi5nck1cpbg5::::res://scenes/misc/door.tscn<>uid://bdrhldmlhebet::::res://art/tilesets/plains.tres<>uid://byqwrxtmyt6ql::::res://scenes/characters/character.tscn<>uid://clu2ntpp0y0gc::::res://scenes/misc/ui.tscn
-::res://scenes/misc/::1727327032
-door.tscn::PackedScene::5001767767115864134::1727327032::0::1::::<><>::res://scripts/misc/door.gd
-Main menue.tscn::PackedScene::5938746290332977845::1727327032::0::1::::<><>::res://scripts/misc/main_menue.gd
-ui.tscn::PackedScene::5587869798442843170::1727327032::0::1::::<><>::res://scripts/misc/ui.gd<>uid://cn8407anpnhhb::::res://art/Character spritesheets/the guy/healthbar1.png<>uid://b3bof134wcqyd::::res://art/Character spritesheets/the guy/healthbar2.png<>uid://duwgpf6d4vd7a::::res://art/Character spritesheets/the guy/stambar1.png
-::res://scripts/::1725492647
-the guy walking-sheet.png::CompressedTexture2D::8753395163142622793::1724643231::1725492647::1::::<><>::
-::res://scripts/characters/::1727329664
-character.gd::GDScript::-1::1726034973::0::1::::Player<>CharacterBody2D<>::
-junction.gd::GDScript::-1::1725089997::0::1::::<>Node2D<>::
-old movement.gd::GDScript::-1::1725078133::0::1::::<>CharacterBody2D<>::
-slime.gd::GDScript::-1::1727329664::0::1::::<>CharacterBody2D<>::
-::res://scripts/global/::1725492631
-global.gd::GDScript::-1::1725492631::0::1::::<>Node<>::
-Navigation_manager.gd::GDScript::-1::1725324048::0::1::::<>Node<>::
-::res://scripts/levels/::1725492595
-basic_level.gd::GDScript::-1::1725492595::0::1::::<>Node2D<>::
-flower_ring.gd::GDScript::-1::1724806410::0::1::::<>Node2D<>::
-::res://scripts/misc/::1725492631
-door.gd::GDScript::-1::1725102384::0::1::::Door<>Area2D<>::
-main_menue.gd::GDScript::-1::1725328627::0::1::::<>Node2D<>::
-ui.gd::GDScript::-1::1725492631::0::1::::<>CanvasLayer<>::
-::res://tmp/::1727327032
-enemy_project_recording.tscn::PackedScene::4187400698711065949::1727327032::0::1::::<><>::uid://byqwrxtmyt6ql::::res://scenes/characters/character.tscn<>uid://bm0dw3edj6qxj::::res://scenes/characters/green_slime.tscn
+::res://::1727498675
+export_presets.cfg::TextFile::-1::1727496135::0::1::::<><>::
+icon.svg::CompressedTexture2D::5392545246896395256::1727496137::1727496260::1::::<><>::
+README.md::TextFile::-1::1727496135::0::1::::<><>::
+::res://art/::1727496135
+::res://art/Character spritesheets/::1727496135
+::res://art/Character spritesheets/slime/::1727496260
+slime aleart.png::CompressedTexture2D::234985167866087553::1727496135::1727496260::1::::<><>::
+slimeidle.png::CompressedTexture2D::5479809361479837666::1727496135::1727496260::1::::<><>::
+slimejump.png::CompressedTexture2D::8068715712061260455::1727496135::1727496260::1::::<><>::
+slime_dash.png::CompressedTexture2D::8580243752294812084::1727496135::1727496260::1::::<><>::
+slime_ded.png::CompressedTexture2D::4921586670922449947::1727496135::1727496260::1::::<><>::
+slime_hurt.png::CompressedTexture2D::3816613031405687229::1727496135::1727496260::1::::<><>::
+water&beach.png::CompressedTexture2D::692428767595353675::1727496135::1727496260::1::::<><>::
+::res://art/Character spritesheets/the guy/::1727496260
+Behind_hurtt.png::CompressedTexture2D::806592827462208220::1727496135::1727496260::1::::<><>::
+healthbar1.png::CompressedTexture2D::5755227919560875011::1727496135::1727496260::1::::<><>::
+healthbar2.png::CompressedTexture2D::4354633060389074563::1727496135::1727496260::1::::<><>::
+Left-Sideways-guy1-sheet-sheet.png::CompressedTexture2D::1510632991844958361::1727496135::1727496260::1::::<><>::
+Right-Sideways-guy1-sheet.png::CompressedTexture2D::7495322751144654773::1727496135::1727496260::1::::<><>::
+side_hurt.png::CompressedTexture2D::6855991029969922500::1727496135::1727496260::1::::<><>::
+stambar1.png::CompressedTexture2D::8608846633976015716::1727496135::1727496260::1::::<><>::
+stambar2.png::CompressedTexture2D::5911009432966829728::1727496135::1727496260::1::::<><>::
+the guy behind walking1-sheet-sheet.png::CompressedTexture2D::6518996233724986434::1727496135::1727496260::1::::<><>::
+the guy up idle.png::CompressedTexture2D::3760859229220578172::1727496135::1727496260::1::::<><>::
+the guy walking-sheet.png::CompressedTexture2D::6347919339265307579::1727496135::1727496260::1::::<><>::
+the guy.png::CompressedTexture2D::6826848871643263144::1727496135::1727496260::1::::<><>::
+the guy_hurt_down.png::CompressedTexture2D::5126568262753258915::1727496135::1727496260::1::::<><>::
+::res://art/objects/::1727496260
+grassland bushes.png::CompressedTexture2D::3814772682178903483::1727496135::1727496260::1::::<><>::
+plains trees.png::CompressedTexture2D::3649853662573821741::1727496135::1727496260::1::::<><>::
+The rock sprite.png::CompressedTexture2D::8939853018052319195::1727496135::1727496260::1::::<><>::
+::res://art/tilemap/::1727496260
+Hills ladder.png::CompressedTexture2D::2444871238776952284::1727496135::1727496260::1::::<><>::
+hills.png::CompressedTexture2D::1260720140829544026::1727496135::1727496260::1::::<><>::
+path & grass.png::CompressedTexture2D::5479747777143124264::1727496135::1727496260::1::::<><>::
+plank.png::CompressedTexture2D::6960279354845428151::1727496135::1727496260::1::::<><>::
+planks.png::CompressedTexture2D::326142173098554908::1727496135::1727496260::1::::<><>::
+slimeidle.png::CompressedTexture2D::2046364062935764620::1727496135::1727496260::1::::<><>::
+tileset 2.png::CompressedTexture2D::3053982576288483573::1727496135::1727496260::1::::<><>::
+water_transistions.png::CompressedTexture2D::8377689123449608793::1727496135::1727496260::1::::<><>::
+::res://art/tilesets/::1727496473
+plains.tres::TileSet::2632526475725539471::1727496473::0::1::::<><>::uid://bsaas6nruknw4::::res://art/objects/plains trees.png<>uid://ckcov67odbexs::::res://art/tilemap/path & grass.png<>uid://bjrmv80mjymbt::::res://art/tilemap/tileset 2.png<>uid://d0mscqqjmlt0f::::res://art/objects/The rock sprite.png<>uid://r7x42i8f7kys::::res://art/tilemap/hills.png<>uid://bul50psdfedr4::::res://art/objects/grassland bushes.png<>uid://ba3kw37k08ad5::::res://art/tilemap/Hills ladder.png<>uid://drmhk0e4erj7n::::res://art/tilemap/water_transistions.png<>uid://ev8rqd62w4qi::::res://art/tilemap/planks.png
+::res://art/Weapons/::1727496260
+wood sword 1.png::CompressedTexture2D::9040811122477911829::1727496135::1727496260::1::::<><>::
+::res://exports/::1727498671
+::res://exports/1.2/::1727496136
+::res://exports/1.5/::1727496136
+::res://exports/Glichlands 1.1  combat update/::1727496137
+::res://scenes/::1727496137
+::res://scenes/characters/::1727498563
+character.tscn::PackedScene::4105350345374497663::1727498563::0::1::::<><>::res://scripts/characters/character.gd<>uid://c4i8g6inr645q::::res://art/Character spritesheets/the guy/the guy.png<>uid://cwo8klrmqcb4n::::res://art/Character spritesheets/the guy/the guy walking-sheet.png<>uid://cfbl3h2t2n2lj::::res://art/Character spritesheets/the guy/the guy_hurt_down.png<>uid://de114upjslulx::::res://art/Character spritesheets/the guy/Right-Sideways-guy1-sheet.png<>uid://vr0502el1pev::::res://art/Character spritesheets/the guy/Left-Sideways-guy1-sheet-sheet.png<>uid://c4xdf2g5unbrw::::res://art/Character spritesheets/the guy/side_hurt.png<>uid://btt12jfiyqha7::::res://art/Character spritesheets/the guy/the guy up idle.png<>uid://cy436emcu3h7g::::res://art/Character spritesheets/the guy/the guy behind walking1-sheet-sheet.png<>uid://lqyp3yuetoga::::res://art/Character spritesheets/the guy/Behind_hurtt.png<>uid://d12o3rc4nnlpt::::res://art/Weapons/wood sword 1.png
+green_slime.tscn::PackedScene::3280519166627783871::1727498563::0::1::::<><>::res://scripts/characters/slime.gd<>uid://ckcpwop4xluv7::::res://art/Character spritesheets/slime/slimeidle.png<>uid://dl3f3ebi5rx6::::res://art/Character spritesheets/slime/slime aleart.png<>uid://duilmjlf8u13e::::res://art/Character spritesheets/slime/slime_dash.png<>uid://bum2cahplv0r6::::res://art/Character spritesheets/slime/slime_hurt.png<>uid://dm7stlw782uwd::::res://art/Character spritesheets/slime/slimejump.png<>uid://cceb2wks2catv::::res://art/Character spritesheets/slime/slime_ded.png
+::res://scenes/levels/::1727496137
+::res://scenes/levels/plains/::1727498563
+combat_tutorial.tscn::PackedScene::3261508628709041222::1727498563::0::1::::<><>::res://scripts/levels/basic_level.gd<>uid://bm0dw3edj6qxj::::res://scenes/characters/green_slime.tscn<>uid://cdi5nck1cpbg5::::res://scenes/misc/door.tscn<>uid://bdrhldmlhebet::::res://art/tilesets/plains.tres<>uid://byqwrxtmyt6ql::::res://scenes/characters/character.tscn<>uid://clu2ntpp0y0gc::::res://scenes/misc/ui.tscn
+flower_ring.tscn::PackedScene::282066037275744810::1727498563::0::1::::<><>::res://scripts/levels/basic_level.gd<>uid://bdrhldmlhebet::::res://art/tilesets/plains.tres<>uid://byqwrxtmyt6ql::::res://scenes/characters/character.tscn<>uid://cdi5nck1cpbg5::::res://scenes/misc/door.tscn
+junction.tscn::PackedScene::7748854593856326657::1727498563::0::1::::<><>::res://scripts/levels/basic_level.gd<>uid://byqwrxtmyt6ql::::res://scenes/characters/character.tscn<>uid://clu2ntpp0y0gc::::res://scenes/misc/ui.tscn<>uid://bdrhldmlhebet::::res://art/tilesets/plains.tres<>uid://cdi5nck1cpbg5::::res://scenes/misc/door.tscn<>uid://bm0dw3edj6qxj::::res://scenes/characters/green_slime.tscn
+lonley_lake.tscn::PackedScene::4114401206575631290::1727496137::0::1::::<><>::uid://bdrhldmlhebet::::res://art/tilesets/plains.tres<>uid://byqwrxtmyt6ql::::res://scenes/characters/character.tscn
+start_ring.tscn::PackedScene::1158336095341777900::1727496137::0::1::::<><>::res://scripts/levels/basic_level.gd<>uid://cdi5nck1cpbg5::::res://scenes/misc/door.tscn<>uid://bdrhldmlhebet::::res://art/tilesets/plains.tres<>uid://byqwrxtmyt6ql::::res://scenes/characters/character.tscn<>uid://clu2ntpp0y0gc::::res://scenes/misc/ui.tscn
+::res://scenes/misc/::1727498563
+door.tscn::PackedScene::5001767767115864134::1727496137::0::1::::<><>::res://scripts/misc/door.gd
+Main menue.tscn::PackedScene::5938746290332977845::1727498563::0::1::::<><>::res://scripts/misc/main_menue.gd
+ui.tscn::PackedScene::5587869798442843170::1727496137::0::1::::<><>::res://scripts/misc/ui.gd<>uid://cn8407anpnhhb::::res://art/Character spritesheets/the guy/healthbar1.png<>uid://b3bof134wcqyd::::res://art/Character spritesheets/the guy/healthbar2.png<>uid://duwgpf6d4vd7a::::res://art/Character spritesheets/the guy/stambar1.png
+::res://scripts/::1727496260
+the guy walking-sheet.png::CompressedTexture2D::8753395163142622793::1727496137::1727496260::1::::<><>::
+::res://scripts/characters/::1727498549
+character.gd::GDScript::-1::1727496137::0::1::::Player<>CharacterBody2D<>::
+junction.gd::GDScript::-1::1727496137::0::1::::<>Node2D<>::
+old movement.gd::GDScript::-1::1727496137::0::1::::<>CharacterBody2D<>::
+slime.gd::GDScript::-1::1727498549::0::1::::<>CharacterBody2D<>::
+::res://scripts/global/::1727496137
+global.gd::GDScript::-1::1727496137::0::1::::<>Node<>::
+Navigation_manager.gd::GDScript::-1::1727496137::0::1::::<>Node<>::
+::res://scripts/levels/::1727496137
+basic_level.gd::GDScript::-1::1727496137::0::1::::<>Node2D<>::
+flower_ring.gd::GDScript::-1::1727496137::0::1::::<>Node2D<>::
+::res://scripts/misc/::1727496137
+door.gd::GDScript::-1::1727496137::0::1::::Door<>Area2D<>::
+main_menue.gd::GDScript::-1::1727496137::0::1::::<>Node2D<>::
+ui.gd::GDScript::-1::1727496137::0::1::::<>CanvasLayer<>::
+::res://tmp/::1727496137
+enemy_project_recording.tscn::PackedScene::4187400698711065949::1727496137::0::1::::<><>::uid://byqwrxtmyt6ql::::res://scenes/characters/character.tscn<>uid://bm0dw3edj6qxj::::res://scenes/characters/green_slime.tscn
